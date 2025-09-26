@@ -1,0 +1,185 @@
+@use "sass:math";
+@use "sass:map";
+@use "../../foundation" as *;
+
+.p-about {
+  position: relative;
+  padding-bottom: 150px;
+  overflow: hidden;
+  &__inner {
+    position: relative;
+    &-txt {
+      line-height: 3.2em;
+      font-size: 16px;
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &__decoration {
+    &-box {
+      &.left {
+        li {
+          left: 0;
+          position: absolute;
+          aspect-ratio: 1;
+          &:nth-child(1) {
+            top: 100px;
+          }
+          &:nth-child(2) {
+            top: 40%;
+            transform: translateY(-50%) rotate(-70deg);
+            left: 240px;
+            width: 110px;
+          }
+          &:nth-child(3) {
+            transform: rotate(-95deg);
+            bottom: 237px;
+            left: 120px;
+            width: 90px;
+          }
+        }
+      }
+      &.right {
+        li {
+          right: 0;
+          position: absolute;
+          &:nth-child(1) {
+            transform: rotate(-95deg);
+            top: 80px;
+            right: 240px;
+            width: 80px;
+          }
+          &:nth-child(2) {
+            top: 40%;
+            transform: translateY(-50%) rotate(-75deg);
+            right: 50px;
+            width: 110px;
+          }
+          &:nth-child(3) {
+            transform: rotate(-80deg);
+            bottom: 250px;
+            right: 0px;
+            width: 80px;
+          }
+          &:nth-child(4) {
+            transform: rotate(-30deg);
+            bottom: 100px;
+            right: 300px;
+            width: 80px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.sakura {
+  position: absolute;
+  top: 0;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+}
+.sakura li {
+  width: 60px;
+  position: absolute;
+  list-style: none;
+  top: -50px;
+  animation: fall 4s linear infinite, rotate1 2s ease-in-out infinite alternate;
+}
+@keyframes fall {
+  to {
+    top: 120%;
+  }
+}
+@keyframes rotate1 {
+  from {
+    transform: translateX(0px) rotate(0deg);
+  }
+  to {
+    transform: translateX(200px) rotate(-80deg) rotateX(180deg);
+  }
+}
+@keyframes rotate2 {
+  from {
+    transform: translateX(200px) rotate(-45deg);
+  }
+  to {
+    transform: translateX(0px) rotate(0deg);
+  }
+}
+.sakura li:nth-child(1) {
+  width: 80px;
+  left: 0;
+  animation: fall 10s linear infinite, rotate1 3s ease-in-out infinite alternate;
+}
+.sakura li:nth-child(2) {
+  width: 120px;
+  left: 5vw;
+  animation: fall 15s linear infinite, rotate1 2s ease-in-out infinite alternate;
+}
+.sakura li:nth-child(3) {
+  left: 15vw;
+  animation: fall 9s linear infinite, rotate1 3.5s ease-in-out infinite alternate;
+}
+.sakura li:nth-child(4) {
+  left: 30vw;
+  animation: fall 8s linear infinite, rotate2 4s ease-in-out infinite alternate;
+}
+.sakura li:nth-child(5) {
+  left: 40vw;
+  animation: fall 10s linear infinite, rotate1 4s ease-in-out infinite alternate;
+}
+.sakura li:nth-child(6) {
+  left: 55vw;
+  animation: fall 11s linear infinite, rotate2 3s ease-in-out infinite alternate;
+}
+.sakura li:nth-child(7) {
+  left: 65vw;
+  animation: fall 7s linear infinite, rotate2 3.5s ease-in-out infinite alternate;
+}
+.sakura li:nth-child(8) {
+  left: 50vw;
+  animation: fall 7s linear infinite, rotate1 3s ease-in-out infinite alternate;
+}
+
+.sakura li:nth-child(9) {
+  width: 80px;
+  right: 0;
+  animation: fall 10s linear infinite, rotate1 3s ease-in-out infinite alternate;
+}
+.sakura li:nth-child(10) {
+  width: 120px;
+  right: 5vw;
+  animation: fall 15s linear infinite, rotate1 2s ease-in-out infinite alternate;
+}
+.sakura li:nth-child(11) {
+  right: 15vw;
+  animation: fall 9s linear infinite, rotate1 3.5s ease-in-out infinite alternate;
+}
+.sakura li:nth-child(12) {
+  right: 30vw;
+  animation: fall 8s linear infinite, rotate2 4s ease-in-out infinite alternate;
+}
+.sakura li:nth-child(13) {
+  right: 40vw;
+  animation: fall 10s linear infinite, rotate1 4s ease-in-out infinite alternate;
+}
+.sakura li:nth-child(14) {
+  right: 55vw;
+  animation: fall 11s linear infinite, rotate2 3s ease-in-out infinite alternate;
+}
+.sakura li:nth-child(15) {
+  right: 65vw;
+  animation: fall 7s linear infinite, rotate2 3.5s ease-in-out infinite alternate;
+}
+.sakura li:nth-child(16) {
+  right: 50vw;
+  animation: fall 7s linear infinite, rotate1 3s ease-in-out infinite alternate;
+}

@@ -1,0 +1,83 @@
+@use "sass:math";
+@use "sass:map";
+@use "../../foundation" as *;
+
+.p-initiatives {
+  h2 {
+    margin-bottom: 140px;
+  }
+  &__sub-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  &__bg {
+    align-items: center;
+    margin: 0 calc(50% - 50vw); /* 画面幅いっぱいにはみ出させるためのネガティブマージン */
+    width: 100vw;
+    position: relative;
+    background-color: #222;
+    &:not(:first-child) {
+      margin-bottom: 240px;
+    }
+  }
+
+  &__inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    align-items: center;
+    position: relative;
+  }
+  &__box {
+    margin-bottom: 160px;
+  }
+  &__txt {
+    padding: 50px 40px;
+  }
+
+  &__img {
+    position: absolute;
+    right: 0%;
+    img {
+      max-width: 600px;
+    }
+  }
+  .flex {
+    &--reverse {
+      flex-direction: row-reverse;
+      .p-initiatives__img {
+        right: auto;
+        left: -10%;
+      }
+    }
+  }
+
+  &__list {
+    margin-top: 30px;
+    &-item {
+      border-bottom: 1px solid #fff;
+      a {
+        font-size: 20px;
+        display: block;
+        padding: 20px 40px;
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 40px;
+          width: 25px;
+          height: 28px;
+          background: url(../../assets/img/common/arrow_white_under.svg) no-repeat right center;
+          background-size: 100% !important;
+          transition: all 0.3s ease;
+        }
+        &:hover {
+          &::before {
+            top: 60%;
+          }
+        }
+      }
+    }
+  }
+}

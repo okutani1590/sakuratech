@@ -1,0 +1,29 @@
+@use "sass:map";
+@use "foundation" as *;
+@use "layout/_header.scss";
+
+// project
+@use "object/project/_sample.scss";
+@use "object/project/_kv.scss";
+@use "object/project/_intro.scss";
+@use "object/project/_about.scss";
+@use "object/project/_vision.scss";
+@use "object/project/_interview.scss";
+@use "object/project/_benefits.scss";
+@use "object/project/_job.scss";
+@use "object/project/member_interview.scss";
+@use "object/project/initiatives.scss";
+
+// layout
+@use "layout/_common.scss";
+
+// utility
+@use "object/utility/_text.scss";
+
+// コンポーネント
+@use "object/component/_title.scss";
+@use "object/component/button.scss";
+@use "object/component/anchorlink.scss";
+@use "object/component/cta.scss";
+@use "object/component/hero.scss";
+@use "object/component/subpage_link.scss";

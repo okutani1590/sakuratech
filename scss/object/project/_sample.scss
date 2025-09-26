@@ -1,0 +1,12 @@
+@use "sass:math";
+@use "sass:map";
+@use "../../foundation" as *;
+
+.sample {
+  background-color: #b7b7b7;
+  height: 200vh;
+}
+
+.hidden {
+  display: none !important;
+}

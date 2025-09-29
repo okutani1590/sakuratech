@@ -6,8 +6,8 @@
   &-kv {
     img {
       width: 100%;
-      height: calc((540 / 1366) * 100vw);
-      max-height: 680px;
+      height: calc((535 / 1366) * 100vw);
+
       object-fit: cover;
     }
   }
@@ -24,6 +24,7 @@
     padding-block: 60px;
     justify-content: space-between;
     align-items: flex-end;
+    display: flex;
     &-en {
       font-size: 42px;
       font-family: var(--font-en);

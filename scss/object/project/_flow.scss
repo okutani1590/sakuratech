@@ -1,0 +1,66 @@
+@use "sass:math";
+@use "sass:map";
+@use "../../foundation" as *;
+
+.p-flow {
+  &__personality {
+    margin-bottom: 80px;
+    &-message {
+      gap: 80px;
+      &-left {
+        max-width: 350px;
+      }
+
+      &-right {
+        max-width: 595px;
+        h3 {
+          font-size: 40px;
+          line-height: 1.4em;
+          font-weight: 600;
+          margin-bottom: 20px;
+        }
+        p {
+          font-size: 18px;
+          line-height: 1.8em;
+          font-weight: 300;
+          margin-bottom: 20px;
+        }
+        small {
+          display: block;
+          width: fit-content;
+          margin-left: auto;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  &__list {
+    &-item {
+      display: flex;
+      padding: 25px;
+      background-color: #222222;
+      gap: 40px;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+      &-text {
+        .step {
+          color: $color-sakura;
+          font-weight: bold;
+          font-size: 12px;
+        }
+        .note {
+          font-size: 14px;
+          &::before {
+            content: "※";
+            padding-right: 5px;
+          }
+        }
+      }
+      &-title {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

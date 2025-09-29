@@ -10,6 +10,7 @@
     margin-bottom: 40px;
     font-size: 38px;
     font-weight: 600;
+    color: #fff;
     small {
       font-size: 20px;
       display: block;
@@ -36,5 +37,24 @@
     max-width: 1260px;
     margin: 40px auto;
     border-radius: 10px;
+  }
+
+  &--02 {
+    background: url(../../assets/img/common/cta_02_bg.jpg) no-repeat;
+    background-size: contain;
+    border-radius: 10px;
+    position: relative;
+    margin-top: 100px;
+    padding: 50px 80px;
+    overflow: hidden;
+    &__title {
+      margin-bottom: 40px;
+      font-size: 28px;
+      font-weight: 600;
+      small {
+        font-size: 20px;
+        display: block;
+      }
+    }
   }
 }

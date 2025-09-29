@@ -22,3 +22,16 @@
     font-weight: bold;
   }
 }
+
+.c-sec-decoration {
+  top: 0;
+  left: 0;
+  position: absolute;
+  font-style: normal;
+  padding: 5px 55px 5px 10px;
+  background-color: #d80576;
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+  span {
+    font-weight: bold;
+  }
+}

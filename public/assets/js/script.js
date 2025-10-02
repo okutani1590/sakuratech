@@ -39,3 +39,27 @@ function handleScroll() {
 
 window.addEventListener("scroll", handleScroll);
 handleScroll(); // 初期状態をセット
+
+// スライダー
+
+const swiper = new Swiper(".swiper", {
+  loop: true, // ループ
+  allowTouchMove: false, // ← これで手でスライド不可
+  speed: 1500, // 少しゆっくり(デフォルトは300)
+  effect: "fade", // フェード
+  autoplay: {
+    // 自動再生
+    delay: 4000, // 2秒後に次のスライド
+    disableOnInteraction: false, // 矢印をクリックしても自動再生を止めない
+  },
+  // ページネーション
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  // 前後の矢印
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});

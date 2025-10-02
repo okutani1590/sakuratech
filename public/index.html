@@ -36,6 +36,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
 
@@ -44,19 +47,189 @@
       <div class="main-contents">
         <main>
           <section class="kv">
-            <div class="kv__inner">
-              <div class="kv__bg">
-                <picture>
-                  <source srcset="./assets/img/top/kv.webp" type="image/webp" />
-                  <source srcset="./assets/img/top/kv.png" />
-                  <img src="./assets/img/top/kv.png" alt="KV背景" width="1200" height="870" />
-                </picture>
-              </div>
-              <div class="kv__txt">
-                <h1><img src="./assets/img/top/kv_title.png" alt="針金をおもろい未来の引き金に" /></h1>
+            <div class="kv__inner swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="kv__bg">
+                    <picture>
+                      <!-- スマホ用 -->
+                      <source srcset="./assets/img/top/kv_sp.webp" type="image/webp" media="(max-width: 768px)" />
+                      <source srcset="./assets/img/top/kv_sp.png" media="(max-width: 768px)" />
+                      <!-- PC用 -->
+                      <source srcset="./assets/img/top/kv.webp" type="image/webp" />
+                      <source srcset="./assets/img/top/kv.png" />
+                      <img src="./assets/img/top/kv.png" alt="KV背景" width="1200" height="870" />
+                    </picture>
+                  </div>
+                  <div class="kv__txt">
+                    <h1>
+                      <picture>
+                        <!-- スマホ用 -->
+                        <source srcset="./assets/img/top/kv_title_sp.png" media="(max-width: 768px)" />
+                        <!-- PC用 -->
+                        <source srcset="./assets/img/top/kv_title.png" />
+                        <img src="./assets/img/top/kv_title.png" alt="KV背景" width="1200" height="870" />
+                      </picture>
+                    </h1>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="kv__bg">
+                    <picture>
+                      <!-- スマホ用 -->
+                      <source srcset="./assets/img/top/kv_02_sp.webp" type="image/webp" media="(max-width: 768px)" />
+                      <source srcset="./assets/img/top/kv_02_sp.png" media="(max-width: 768px)" />
+
+                      <!-- PC用 -->
+                      <source srcset="./assets/img/top/kv_02.webp" type="image/webp" />
+                      <source srcset="./assets/img/top/kv_02.png" />
+                      <img src="./assets/img/top/kv_02.png" alt="KV背景" width="1200" height="870" />
+                    </picture>
+                  </div>
+                  <div class="kv__txt">
+                    <h1>
+                      <picture>
+                        <!-- スマホ用 -->
+                        <source srcset="./assets/img/top/kv_title02_sp.png" media="(max-width: 768px)" />
+                        <!-- PC用 -->
+                        <source srcset="./assets/img/top/kv_title02.png" />
+                        <img src="./assets/img/top/kv_title02.png" alt="KV背景" width="1200" height="870" />
+                      </picture>
+                    </h1>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="kv__bg">
+                    <picture>
+                      <!-- スマホ用 -->
+                      <source srcset="./assets/img/top/kv_03_sp.webp" type="image/webp" media="(max-width: 768px)" />
+                      <source srcset="./assets/img/top/kv_03_sp.png" media="(max-width: 768px)" />
+
+                      <!-- PC用 -->
+                      <source srcset="./assets/img/top/kv_03.webp" type="image/webp" />
+                      <source srcset="./assets/img/top/kv_03.png" />
+                      <img src="./assets/img/top/kv_03.png" alt="KV背景" width="1200" height="870" />
+                    </picture>
+                  </div>
+                  <div class="kv__txt">
+                    <h1>
+                      <picture>
+                        <!-- スマホ用 -->
+                        <source srcset="./assets/img/top/kv_title03_sp.png" media="(max-width: 768px)" />
+                        <!-- PC用 -->
+                        <source srcset="./assets/img/top/kv_title03.png" />
+                        <img src="./assets/img/top/kv_title03.png" alt="KV背景" width="1200" height="870" />
+                      </picture>
+                    </h1>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="kv__bg">
+                    <picture>
+                      <!-- スマホ用 -->
+                      <source srcset="./assets/img/top/kv_04_sp.webp" type="image/webp" media="(max-width: 768px)" />
+                      <source srcset="./assets/img/top/kv_04_sp.png" media="(max-width: 768px)" />
+
+                      <!-- PC用 -->
+                      <source srcset="./assets/img/top/kv_04.webp" type="image/webp" />
+                      <source srcset="./assets/img/top/kv_04.png" />
+                      <img src="./assets/img/top/kv_04.png" alt="KV背景" width="1200" height="870" />
+                    </picture>
+                  </div>
+                  <div class="kv__txt">
+                    <h1>
+                      <picture>
+                        <!-- スマホ用 -->
+                        <source srcset="./assets/img/top/kv_title04_sp.png" media="(max-width: 768px)" />
+                        <!-- PC用 -->
+                        <source srcset="./assets/img/top/kv_title04.png" />
+                        <img src="./assets/img/top/kv_title04.png" alt="KV背景" width="1200" height="870" />
+                      </picture>
+                    </h1>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="kv__bg">
+                    <picture>
+                      <!-- スマホ用 -->
+                      <source srcset="./assets/img/top/kv_05_sp.webp" type="image/webp" media="(max-width: 768px)" />
+                      <source srcset="./assets/img/top/kv_05_sp.png" media="(max-width: 768px)" />
+                      <!-- PC用 -->
+                      <source srcset="./assets/img/top/kv_05.webp" type="image/webp" />
+                      <source srcset="./assets/img/top/kv_05.png" />
+                      <img src="./assets/img/top/kv_05.png" alt="KV背景" width="1200" height="870" />
+                    </picture>
+                  </div>
+                  <div class="kv__txt">
+                    <h1>
+                      <picture>
+                        <!-- スマホ用 -->
+                        <source srcset="./assets/img/top/kv_title05_sp.png" media="(max-width: 768px)" />
+                        <!-- PC用 -->
+                        <source srcset="./assets/img/top/kv_title05.png" />
+                        <img src="./assets/img/top/kv_title05.png" alt="KV背景" width="1200" height="870" />
+                      </picture>
+                    </h1>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="kv__bg">
+                    <picture>
+                      <!-- スマホ用 -->
+                      <source srcset="./assets/img/top/kv_06_sp.webp" type="image/webp" media="(max-width: 768px)" />
+                      <source srcset="./assets/img/top/kv_06_sp.png" media="(max-width: 768px)" />
+                      <!-- PC用 -->
+                      <source srcset="./assets/img/top/kv_06.webp" type="image/webp" />
+                      <source srcset="./assets/img/top/kv_06.png" />
+                      <img src="./assets/img/top/kv_06.png" alt="KV背景" width="1200" height="870" />
+                    </picture>
+                  </div>
+                  <div class="kv__txt">
+                    <h1>
+                      <picture>
+                        <!-- スマホ用 -->
+                        <source srcset="./assets/img/top/kv_title06_sp.png" media="(max-width: 768px)" />
+                        <!-- PC用 -->
+                        <source srcset="./assets/img/top/kv_title06.png" />
+                        <img src="./assets/img/top/kv_title06.png" alt="KV背景" width="1200" height="870" />
+                      </picture>
+                    </h1>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="kv__bg">
+                    <picture>
+                      <!-- スマホ用 -->
+                      <source srcset="./assets/img/top/kv_07_sp.webp" type="image/webp" media="(max-width: 768px)" />
+                      <source srcset="./assets/img/top/kv_07_sp.png" media="(max-width: 768px)" />
+                      <!-- PC用 -->
+                      <source srcset="./assets/img/top/kv_07.webp" type="image/webp" />
+                      <source srcset="./assets/img/top/kv_07.png" />
+                      <img src="./assets/img/top/kv_07.png" alt="KV背景" width="1200" height="870" />
+                    </picture>
+                  </div>
+                  <div class="kv__txt">
+                    <h1>
+                      <picture>
+                        <!-- スマホ用 -->
+                        <source srcset="./assets/img/top/kv_title07_sp.png" media="(max-width: 768px)" />
+                        <!-- PC用 -->
+                        <source srcset="./assets/img/top/kv_title07.png" />
+                        <img src="./assets/img/top/kv_title07.png" alt="KV背景" width="1200" height="870" />
+                      </picture>
+                    </h1>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
+
           <!-- /kv -->
           <section class="p-about sec">
             <div class="p-about__inner">
@@ -315,6 +488,17 @@
             <div class="p-benefits__inner">
               <div class="p-benefits__bg">
                 <picture>
+                  <source srcset="./assets/img/top/employee_benefits01.webp" type="image/webp" />
+                  <source srcset="./assets/img/top/employee_benefits01.jpg" />
+                  <img src="./assets/img/top/employee_benefits01.jpg" alt="KV背景" width="100%" height="100%" />
+                </picture>
+
+                <picture>
+                  <!-- スマホ用 -->
+                  <source srcset="./assets/img/top/employee_benefits01_sp.webp" type="image/webp" media="(max-width: 768px)" />
+                  <source srcset="./assets/img/top/employee_benefits01_sp.jpg" media="(max-width: 768px)" />
+
+                  <!-- PC用 -->
                   <source srcset="./assets/img/top/employee_benefits01.webp" type="image/webp" />
                   <source srcset="./assets/img/top/employee_benefits01.jpg" />
                   <img src="./assets/img/top/employee_benefits01.jpg" alt="KV背景" width="100%" height="100%" />

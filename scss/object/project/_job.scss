@@ -26,6 +26,11 @@
       }
       table {
         width: 85%;
+        tbody {
+          display: flex;
+          flex-direction: column;
+          align-items: baseline;
+        }
         tr {
           display: inline-table;
           &:not(:last-child) {

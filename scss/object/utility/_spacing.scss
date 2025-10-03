@@ -1,0 +1,42 @@
+@use "sass:math";
+@use "sass:map";
+@use "../../foundation" as *;
+
+/* --- Spacing (margin/padding) --- */
+.u-m-0 {
+  margin: 0 !important;
+}
+.u-mt-10 {
+  margin-top: 10px !important;
+}
+.u-mt-20 {
+  margin-top: 20px !important;
+}
+
+.u-mt-30 {
+  margin-top: 30px !important;
+}
+.u-mb-10 {
+  margin-bottom: 10px !important;
+}
+.u-mb-20 {
+  margin-bottom: 20px !important;
+}
+.u-ml-10 {
+  margin-left: 10px !important;
+}
+.u-mr-10 {
+  margin-right: 10px !important;
+}
+.u-p-0 {
+  padding: 0 !important;
+}
+.u-p-10 {
+  padding: 10px !important;
+}
+.u-pt-20 {
+  padding-top: 20px !important;
+}
+.u-pb-20 {
+  padding-bottom: 20px !important;
+}

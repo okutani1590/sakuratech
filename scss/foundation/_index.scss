@@ -23,6 +23,7 @@ body {
 }
 .en {
   font-family: var(--font-en);
+  font-weight: bold;
 }
 
 .main-contents {
@@ -34,6 +35,8 @@ body {
   padding-block: 120px;
   @media screen and (max-width: 767px) {
     padding-block: 60px;
+    margin-inline: auto;
+    width: 90%;
   }
 }
 
@@ -44,4 +47,17 @@ body {
 
 .desc {
   line-height: 1.8em;
+}
+
+.sp {
+  display: none;
+}
+
+@media screen and (max-width: 1080px) {
+  .pc {
+    display: none;
+  }
+  .sp {
+    display: inline-block;
+  }
 }

@@ -5,6 +5,10 @@
 .c-hero {
   background-color: #222222;
   padding: 60px;
+  @include for-device(tablet) {
+    padding: 40px 25px;
+  }
+
   &__inner {
     max-width: 1025px;
     margin-inline: auto;
@@ -12,11 +16,18 @@
   &__title {
     font-size: 32px;
     margin-bottom: 20px;
+    @include for-device(tablet) {
+      font-size: 24px;
+    }
     span {
       display: block;
       font-size: 22px;
       position: relative;
       text-indent: 2.8em;
+      @include for-device(tablet) {
+        font-size: 20px;
+        text-indent: 2.2em;
+      }
       &::before {
         content: "";
         width: 50px;
@@ -26,6 +37,9 @@
         left: 0;
         top: 50%;
         transform: translateY(-50%);
+        @include for-device(tablet) {
+          width: 30px;
+        }
       }
     }
   }
@@ -33,5 +47,8 @@
     font-size: 16px;
     margin-bottom: 40px;
     line-height: 1.8em;
+    @include for-device(tablet) {
+      margin-bottom: 0px;
+    }
   }
 }

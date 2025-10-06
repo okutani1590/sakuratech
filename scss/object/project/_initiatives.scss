@@ -5,10 +5,16 @@
 .p-initiatives {
   h2 {
     margin-bottom: 140px;
+    @include for-device(tablet) {
+      margin-bottom: 60px;
+    }
   }
   &__sub-title {
     font-size: 32px;
     margin-bottom: 20px;
+    @include for-device(tablet) {
+      font-size: 24px;
+    }
   }
   &__bg {
     align-items: center;
@@ -18,6 +24,9 @@
     background-color: #222;
     &:not(:first-child) {
       margin-bottom: 240px;
+      @include for-device(tablet) {
+        margin-bottom: 60px;
+      }
     }
   }
 
@@ -34,24 +43,47 @@
     margin: 0 auto;
     align-items: center;
     position: relative;
+    @include for-device(tablet) {
+      flex-direction: column;
+      padding-block: 40px;
+    }
   }
   &__box {
     margin-bottom: 160px;
+    @include for-device(tablet) {
+      margin-bottom: 80px;
+    }
   }
   &__txt {
     padding: 50px 40px;
+    z-index: 999;
+    @include for-device(tablet) {
+      padding: 0px 25px 50px !important;
+      width: 100% !important;
+    }
   }
 
   &__img {
     position: absolute;
     right: 0%;
+    @include for-device(tablet) {
+      position: static;
+      width: 90% !important;
+      margin: 0 auto;
+    }
     img {
       max-width: 600px;
+      @include for-device(tablet) {
+        width: 100%;
+      }
     }
   }
   .flex {
     &--reverse {
       flex-direction: row-reverse;
+      @include for-device(tablet) {
+        flex-direction: column;
+      }
       .p-initiatives__img {
         right: auto;
         left: -10%;

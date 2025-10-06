@@ -5,12 +5,18 @@
 .c-subpage-link {
   background-color: #222222;
   padding: 60px;
+  @include for-device(tablet) {
+    padding: 60px 25px;
+  }
   &__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     max-width: 1280px;
     margin: 0 auto;
+    @include for-device(tablet) {
+      grid-template-columns: 1fr;
+    }
   }
   &__list-item {
     background-color: $color-sakura;
@@ -21,6 +27,9 @@
       font-weight: bold;
       display: block;
       position: relative;
+      @include for-device(tablet) {
+        padding: 20px 25px;
+      }
       &::before {
         content: "";
         position: absolute;
@@ -42,6 +51,9 @@
       }
       p {
         font-size: 24px;
+        @include for-device(tablet) {
+          font-size: 20px;
+        }
         small {
           font-size: 12px;
           display: block;

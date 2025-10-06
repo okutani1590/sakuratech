@@ -5,13 +5,32 @@
 .c-anchorlink {
   position: relative;
   margin-top: 80px;
-
+  @include for-device(tablet) {
+    width: 90%;
+    margin-inline: auto;
+  }
   &__list {
+    @include for-device(tablet) {
+      flex-direction: column;
+      row-gap: 20px;
+    }
   }
   &__item {
     border-left: 1px solid #585858;
+    @include for-device(tablet) {
+      border-left: 0px solid #585858;
+    }
+    @include for-device(tablet) {
+      &:not(:last-child) {
+        border-bottom: 1px solid #585858;
+        padding-bottom: 20px;
+      }
+    }
     &:last-child {
       border-right: 1px solid #585858;
+      @include for-device(tablet) {
+        border-right: 0px solid #585858;
+      }
     }
     a {
       display: block;
@@ -20,6 +39,9 @@
       width: 100%;
       position: relative;
       font-size: 17px;
+      @include for-device(tablet) {
+        font-size: calc((14 / 375) * 100vw);
+      }
       &:before {
         content: "";
         position: absolute;

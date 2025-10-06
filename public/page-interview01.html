@@ -78,7 +78,7 @@
               <div class="p-member__box" id="sales_position">
                 <h2 class="p-member__title l_subpage-title">
                   一歩踏み出す勇気で、<br />
-                  新市場と会社の未来を切り拓く。
+                  新市場と会社の未来を<br class="sp" />切り拓く。
                 </h2>
 
                 <div class="p-member__data">
@@ -118,12 +118,18 @@
                 <div class="p-member__flow">
                   <i class="p-member__flow-cat"><small class="en">Flow of the day</small> 　　ー ある1日の仕事の流れ　　</i>
                   <div class="p-member__flow-img">
-                    <img src="./assets/img/interview/member01/flow.svg" alt="ある1日の仕事の流れ" />
+                    <picture>
+                      <!-- スマホ用 -->
+                      <source srcset="./assets/img/interview/member01/flow_sp.svg" media="(max-width: 768px)" />
+                      <!-- PC用 -->
+                      <source srcset="./assets/img/interview/member01/flow.svg" />
+                      <img src="./assets/img/interview/member01/flow.svg" alt="ある1日の仕事の流れ" />
+                    </picture>
                   </div>
                 </div>
 
                 <div class="l_interview">
-                  <h2 class="l_interview-title">この職種の社員インタビューを見る</h2>
+                  <h2 class="l_interview-title">この職種の社員<br class="sp" />インタビューを見る</h2>
                   <div class="l_interview__content">
                     <ul class="p-interview__list grid md:grid-cols-1">
                       <li class="p-interview__list-item">

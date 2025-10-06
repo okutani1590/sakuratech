@@ -25,16 +25,34 @@
     justify-content: space-between;
     align-items: flex-end;
     display: flex;
+    @include for-device(tablet) {
+      padding-inline: 25px;
+      padding-block: 30px 10px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
     &-en {
       font-size: 42px;
       font-family: var(--font-en);
       font-weight: bold;
+      @include for-device(tablet) {
+        font-size: 25px;
+        line-height: 1.2em;
+        margin-bottom: 10px;
+      }
     }
     &-jp {
       font-size: 20px;
+      @include for-device(tablet) {
+        font-size: 18px;
+      }
     }
 
     .breadcrumb {
+      @include for-device(tablet) {
+        margin-top: 20px;
+        padding-left: 20px;
+      }
       a {
         text-decoration: underline;
         position: relative;
@@ -70,13 +88,22 @@
   margin-bottom: 60px;
   padding-left: 25px;
   font-weight: bold;
+  @include for-device(tablet) {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
   small {
     font-size: 14px;
     display: block;
     margin-bottom: 10px;
+    @include for-device(tablet) {
+      font-size: calc((11 / 375) * 100vw);
+      margin-bottom: 0px;
+    }
   }
   &--small {
     font-size: 14px;
+
     small {
       font-size: 16px;
       margin-bottom: 5px;
@@ -93,6 +120,14 @@
     margin-bottom: 40px;
     text-indent: 1.2em;
     position: relative;
+    @include for-device(tablet) {
+      font-size: 24px;
+      text-indent: 0;
+      padding-left: 0;
+      line-height: 1.4em;
+      text-align: center;
+      margin-bottom: 60px;
+    }
     &::before {
       content: "";
       width: 20px;
@@ -102,11 +137,21 @@
       left: 0;
       top: 50%;
       transform: translateY(-50%);
+      @include for-device(tablet) {
+        top: auto;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+      }
     }
   }
 }
 .p-interview__list-item {
   height: 285px !important;
+  @include for-device(tablet) {
+    height: auto !important;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -117,8 +162,12 @@
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
+    background-size: 50%;
   }
   a {
+    @include for-device(tablet) {
+      padding-inline: 15px;
+    }
     .name {
       width: fit-content;
       padding-right: 40px;
@@ -126,12 +175,21 @@
     h3 {
       font-size: 47px;
       line-height: 1.2em;
+      @include for-device(tablet) {
+        font-size: 24px;
+      }
       small {
         font-size: 37px;
+        @include for-device(tablet) {
+          font-size: 16px;
+        }
       }
     }
   }
   img {
     right: 120px;
+    @include for-device(tablet) {
+      right: 0;
+    }
   }
 }

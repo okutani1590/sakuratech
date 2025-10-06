@@ -7,6 +7,9 @@
   position: relative;
   padding: 80px 0;
   overflow: hidden;
+  @include for-device(tablet) {
+    width: 100%;
+  }
   &__title {
     margin-bottom: 40px;
     font-size: 38px;
@@ -62,10 +65,19 @@
     margin-top: 100px;
     padding: 50px 80px;
     overflow: hidden;
+    @include for-device(tablet) {
+      background: url(../../assets/img/common/cta_02_bg_sp.jpg) no-repeat;
+      padding: 60px 25px 20px;
+      background-size: cover;
+    }
     &__title {
       margin-bottom: 40px;
       font-size: 28px;
       font-weight: 600;
+      @include for-device(tablet) {
+        font-size: 18px;
+        margin-bottom: 30px;
+      }
       small {
         font-size: 20px;
         display: block;

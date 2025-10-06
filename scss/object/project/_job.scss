@@ -6,35 +6,60 @@
   &__box {
     &:not(:last-child) {
       margin-bottom: 180px;
+      @include for-device(tablet) {
+        margin-bottom: 100px;
+      }
     }
   }
   &__catchcopy {
     font-size: 40px;
     margin-bottom: 20px;
+    @include for-device(tablet) {
+      font-size: 24px;
+    }
   }
   &__desc {
     margin-bottom: 30px;
+    line-height: 1.8em;
   }
 
   &__environment {
     margin-top: 60px;
     .flex {
       justify-content: space-between;
+      @include for-device(tablet) {
+        flex-direction: column;
+      }
       h2 {
         font-size: 20px;
         width: 10%;
+        @include for-device(tablet) {
+          width: 100%;
+          margin-bottom: 30px;
+          font-size: 22px;
+        }
       }
       table {
         width: 85%;
+        @include for-device(tablet) {
+          width: 100%;
+        }
         tbody {
           display: flex;
           flex-direction: column;
           align-items: baseline;
+          @include for-device(tablet) {
+            row-gap: 30px;
+          }
         }
         tr {
           display: inline-table;
           &:not(:last-child) {
             margin-bottom: 15px;
+          }
+          @include for-device(tablet) {
+            width: 100%;
+            display: block;
           }
         }
         th {
@@ -44,8 +69,16 @@
           width: 100px;
           display: inline-table;
           margin-right: 20px;
+          @include for-device(tablet) {
+            width: 100%;
+            display: block;
+            margin-bottom: 20px;
+          }
         }
         td {
+          @include for-device(tablet) {
+            font-size: 14px;
+          }
         }
       }
     }

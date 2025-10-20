@@ -454,6 +454,12 @@
           }
         }
       }
+
+      &:last-child {
+        .p-initiatives__img {
+          top: -50px;
+        }
+      }
     }
   }
 

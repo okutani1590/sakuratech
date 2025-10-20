@@ -23,8 +23,10 @@
     img {
       width: 100%;
       height: calc((535 / 1366) * 100vw);
-
       object-fit: cover;
+      @include for-device(tablet) {
+        height: calc((240 / 390) * 100vw);
+      }
     }
   }
 }

@@ -95,7 +95,7 @@
           background-color: #222222;
           padding: 40px 0px;
           &:not(:last-child) {
-            padding: 25px 0;
+            padding: 25px 0 40px;
             margin-bottom: 80px;
             @include for-device(tablet) {
               margin-bottom: 40px;
@@ -188,6 +188,7 @@
               h4 {
                 font-size: 22px;
                 margin-bottom: 20px;
+                font-weight: 500;
               }
               &:not(:last-child) {
                 margin-bottom: 80px;
@@ -221,6 +222,7 @@
                 margin-top: 20px;
                 padding-right: 60px;
                 font-size: 20px;
+                font-weight: 500;
                 position: relative;
                 width: fit-content;
                 border-bottom: 1px solid #fff;

@@ -8,6 +8,7 @@
   padding: 80px 0;
   overflow: hidden;
   @include for-device(tablet) {
+    padding: 35px 0;
     width: 100%;
   }
   &__title {
@@ -16,7 +17,8 @@
     font-weight: 600;
     color: #fff;
     @include for-device(tablet) {
-      font-size: 24px;
+      font-size: 22px;
+      margin-bottom: 20px;
     }
     small {
       font-size: 20px;
@@ -59,7 +61,7 @@
 
   &--02 {
     background: url(../../assets/images/recruit/common/cta_02_bg.jpg) no-repeat;
-    background-size: contain;
+    background-size: 100%;
     border-radius: 10px;
     position: relative;
     margin-top: 100px;

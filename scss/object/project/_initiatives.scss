@@ -13,7 +13,13 @@
     font-size: 32px;
     margin-bottom: 20px;
     @include for-device(tablet) {
-      font-size: 24px;
+      font-size: 22px;
+    }
+  }
+
+  &__desc {
+    @include for-device(tablet) {
+      font-size: 14px;
     }
   }
   &__bg {
@@ -108,13 +114,13 @@
           right: 40px;
           width: 25px;
           height: 28px;
-          background: url(../../assets/recruit/images/common/arrow_white_under.svg) no-repeat right center;
+          background: url(../../assets/images/recruit/common/arrow_white.svg) no-repeat right center;
           background-size: 100% !important;
           transition: all 0.3s ease;
         }
         &:hover {
           &::before {
-            top: 60%;
+            right: 20px;
           }
         }
       }
@@ -129,11 +135,20 @@
             &:nth-child(1) {
               top: 0;
               left: -40px;
+              @include for-device(tablet) {
+                right: 20px;
+                top: -35px;
+                left: auto;
+                width: 80px;
+              }
             }
             &:nth-child(2) {
               bottom: 0;
               left: 47%;
               transform: translateX(-50%) rotate(-80deg);
+              @include for-device(tablet) {
+                left: 25%;
+              }
               img {
                 width: 50%;
               }
@@ -154,6 +169,12 @@
                 top: -150px;
                 right: 30%;
                 transform: rotate(-20deg);
+                @include for-device(tablet) {
+                  top: -40px;
+                  right: 5%;
+                  transform: rotate(-20deg);
+                  width: 100px;
+                }
                 img {
                   width: 70%;
                 }
@@ -188,6 +209,10 @@
                 bottom: -30px;
                 right: 10%;
                 transform: rotate(-80deg);
+                @include for-device(tablet) {
+                  bottom: -5px;
+                  width: 100px;
+                }
                 img {
                   width: 60%;
                 }
@@ -205,6 +230,12 @@
                 top: -70px;
                 left: -30px;
                 transform: rotate(-100deg);
+                @include for-device(tablet) {
+                  width: 110px;
+                  top: -25px;
+                  left: 16px;
+                  transform: rotate(0deg);
+                }
                 img {
                   width: 70%;
                 }
@@ -213,6 +244,13 @@
                 bottom: -80px;
                 left: 40%;
                 transform: translateX(-50%) rotate(-20deg);
+
+                @include for-device(tablet) {
+                  bottom: -10px;
+                  left: auto;
+                  right: 0%;
+                  transform: translateX(-50%) rotate(-105deg);
+                }
 
                 img {
                   width: 50%;
@@ -248,6 +286,10 @@
                 top: -150px;
                 right: 10%;
                 transform: rotate(-80deg);
+                @include for-device(tablet) {
+                  top: -125px;
+                  width: 100px;
+                }
                 img {
                   width: 60%;
                 }
@@ -257,6 +299,12 @@
                 top: -80px;
                 left: -20px;
                 transform: rotate(-100deg);
+                @include for-device(tablet) {
+                  top: -45px;
+                  left: 12px;
+                  transform: rotate(-100deg);
+                  width: 100px;
+                }
                 img {
                   width: 70%;
                 }
@@ -274,6 +322,9 @@
                 top: -80px;
                 right: 20%;
                 transform: rotate(-10deg);
+                @include for-device(tablet) {
+                  width: 100px;
+                }
                 img {
                   width: 70%;
                 }
@@ -294,11 +345,21 @@
               &:nth-child(1) {
                 top: 0;
                 left: -40px;
+                @include for-device(tablet) {
+                  top: -30px;
+                  left: 0;
+                  width: 80px;
+                }
               }
               &:nth-child(2) {
                 bottom: 0;
                 left: 47%;
                 transform: translateX(-50%) rotate(-80deg);
+                @include for-device(tablet) {
+                  width: 120px;
+                  left: auto;
+                  right: 5%;
+                }
                 img {
                   width: 50%;
                 }
@@ -316,6 +377,9 @@
                 bottom: -30px;
                 right: 10%;
                 transform: rotate(-80deg);
+                @include for-device(tablet) {
+                  width: 120px;
+                }
                 img {
                   width: 60%;
                 }
@@ -333,6 +397,9 @@
                 top: -80px;
                 left: -20px;
                 transform: rotate(-100deg);
+                @include for-device(tablet) {
+                  width: 120px;
+                }
                 img {
                   width: 70%;
                 }
@@ -341,6 +408,9 @@
                 bottom: -80px;
                 left: 40%;
                 transform: translateX(-50%) rotate(-20deg);
+                @include for-device(tablet) {
+                  bottom: 0px;
+                }
 
                 img {
                   width: 50%;
@@ -396,6 +466,11 @@
               &:nth-child(1) {
                 top: 0;
                 left: -40px;
+                @include for-device(tablet) {
+                  top: -45px;
+                  left: 5%;
+                  width: 100px;
+                }
               }
               &:nth-child(2) {
                 bottom: 0;
@@ -439,6 +514,7 @@
                 top: -30px;
                 right: 10%;
                 transform: translateX(-50%) rotate(-20deg);
+
                 img {
                   width: 50%;
                 }
@@ -447,6 +523,11 @@
                 bottom: -20px;
                 left: 52%;
                 transform: translateX(-50%) rotate(-80deg);
+                @include for-device(tablet) {
+                  bottom: -30px;
+                  left: 30%;
+                  transform: translateX(-50%) rotate(-0deg);
+                }
                 img {
                   width: 50%;
                 }
@@ -464,6 +545,12 @@
                 top: -30px;
                 right: 10%;
                 transform: translateX(-50%) rotate(-20deg);
+                @include for-device(tablet) {
+                  top: -70px;
+                  right: 10%;
+                  transform: translateX(-50%) rotate(-100deg);
+                  right: 0;
+                }
                 img {
                   width: 50%;
                 }
@@ -489,6 +576,9 @@
                 bottom: -30px;
                 left: 10%;
                 transform: translateX(-50%) rotate(-20deg);
+                @include for-device(tablet) {
+                  left: 30%;
+                }
                 img {
                   width: 50%;
                 }

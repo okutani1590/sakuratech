@@ -7,6 +7,7 @@
     padding-block: 0;
     @include for-device(tablet) {
       text-align: center;
+      width: 100%;
     }
     .section-transition {
       transition: opacity 1s ease-in-out;
@@ -17,6 +18,10 @@
       top: 0;
       height: 100vh;
       overflow: hidden;
+
+      .container {
+        max-width: 1025px;
+      }
     }
 
     .container-height {
@@ -81,6 +86,7 @@
             line-height: 2em;
             @include for-device(tablet) {
               font-size: 16px;
+              text-align: center;
             }
           }
         }
@@ -115,6 +121,9 @@
             border-left: 3px solid #d80576;
             line-height: 1.4;
             padding-left: 25px;
+            @include for-device(tablet) {
+              padding-left: 15px;
+            }
           }
           .meta {
             display: flex;
@@ -223,7 +232,7 @@
                   right: 0px;
                   width: 20px;
                   height: 24px;
-                  background: url(../../assets/recruit/images/common/arrow_white.svg) no-repeat right center;
+                  background: url(../../assets/images/recruit/common/arrow_white.svg) no-repeat right center;
                   background-size: 100% !important;
                   transition: all 0.3s ease;
                 }
@@ -248,7 +257,7 @@
               right: 40px;
               width: 20px;
               height: 24px;
-              background: url(../../assets/recruit/images/common/arrow_white_under.svg) no-repeat right center;
+              background: url(../../assets/images/recruit/common/arrow_white_under.svg) no-repeat right center;
               background-size: 100% !important;
               transition: all 0.3s ease;
             }

@@ -17,6 +17,24 @@
   line-height: 1.5;
   margin-bottom: 30px;
   padding-left: 15px;
+  position: relative;
+  @include for-device(tablet) {
+    border-left: none;
+    padding-left: 0;
+    margin-bottom: 40px;
+    &::before {
+      content: "";
+      height: 4px;
+      background-color: #d80576;
+      position: absolute;
+      top: auto;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+    }
+  }
+
   span {
     font-size: 18px;
     font-weight: bold;

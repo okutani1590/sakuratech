@@ -16,6 +16,7 @@
         a {
           h3 {
             font-size: 34px;
+            font-weight: 500;
             @include for-device(tablet) {
               font-size: 24px;
             }
@@ -142,6 +143,12 @@
               margin-left: 30px;
               @include for-device(tablet) {
                 font-size: 7px;
+              }
+              b {
+                font-size: 24px;
+                @include for-device(tablet) {
+                  font-size: 14px;
+                }
               }
             }
           }

@@ -39,6 +39,7 @@
       width: 100%;
       position: relative;
       font-size: 17px;
+      font-weight: 500;
       @include for-device(tablet) {
         font-size: calc((14 / 375) * 100vw);
       }
@@ -50,7 +51,7 @@
         right: 20px;
         width: 25px;
         height: 25px;
-        background: url(../../assets/recruit/images/common/arrow_pink.svg) no-repeat right center;
+        background: url(../../assets/images/recruit/common/arrow_pink.svg) no-repeat right center;
         transition: all 0.3s ease;
         pointer-events: none;
       }

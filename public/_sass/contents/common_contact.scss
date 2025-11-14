@@ -1,0 +1,274 @@
+@charset "utf-8";
+
+/* =========================================================
+ *
+ *  サイト ： サクラテック株式会社
+ *  タイプ ： Contents Layer [ お問い合わせ ]
+ *
+========================================================= */
+
+
+/* Set Function Import
+========================================================= */
+
+@use "../foundation/functions" as *;
+
+
+
+/* 現在位置ナビゲーション
+========================================================= */
+
+.f-nav-step { width: 100%; overflow: hidden; }
+.f-nav-step__ul { display: flex; justify-content: space-between; }
+.f-nav-step__li { position: relative; display: flex; justify-content: center; align-items: center; width: 32.8%; height: 70px; background-color: #f3f5f8; padding-left: 10px; }
+.f-nav-step__li:nth-child(1)::after,
+.f-nav-step__li:nth-child(2)::after { position: absolute; top: 0; right: -20px; z-index: 12; content: ""; width: 0; height: 0; border-style: solid; border-width: 35px 0 35px 20px; border-color: transparent transparent transparent #f3f5f8; }
+.f-nav-step__li:nth-child(2)::before,
+.f-nav-step__li:nth-child(3)::before { position: absolute; top: 0; left: -1px; z-index: 11; content: ""; width: 0; height: 0; border-style: solid; border-width: 35px 0 35px 21px; border-color: transparent transparent transparent #ffffff; }
+.f-nav-step__li--current { color: #ffffff; background-color: #0e447c; }
+.f-nav-step__li--current:nth-child(1)::after,
+.f-nav-step__li--current:nth-child(2)::after { border-color: transparent transparent transparent #0e447c; }
+.f-nav-step__txt1 { font-family: "Barlow", serif; font-size: 2.4rem; font-weight: 500; padding-right: 8px; }
+.f-nav-step__txt2 { font-feature-settings: "palt"; font-size: 1.6rem; font-weight: 700; letter-spacing: 0.05em; }
+
+@media screen and (max-width: $breakpoint-mobile) {
+	.f-nav-step__li { width: 32.4%; height: 60px; }
+	.f-nav-step__li:nth-child(1)::after,
+	.f-nav-step__li:nth-child(2)::after {
+		right: -10px;
+		border-width: 30px 0 30px 10px;
+	}
+	.f-nav-step__li:nth-child(2)::before,
+	.f-nav-step__li:nth-child(3)::before {
+		border-width: 30px 0 30px 11px;
+	}
+	.f-nav-step__txt1 { font-size: 1.9rem; padding-right: 5px; }
+	.f-nav-step__txt2 { font-size: 1.5rem; }
+	.f-nav-step__txt-off { display: none; }
+}
+
+
+
+/* 注意書き
+========================================================= */
+
+.f-note-area { padding-right: 20px; padding-left: 20px; margin-bottom: 50px; }
+
+.f-note-list { font-size: 1.5rem; line-height: 2.4rem; }
+.f-note-list > li { position: relative; padding-left: 22px; }
+.f-note-list > li:not(:last-child) { margin-bottom: 10px; }
+.f-note-list > li::before { position: absolute; top: 10px; left: 5px; content: ""; width: 6px; height: 6px; background-color: #222222; border-radius: 50%; }
+
+.f-note-blank { position: relative; color: #0156b6; text-decoration: none; border-bottom: 1px solid #0156b6; padding-right: 14px; margin-right: 3px; }
+.f-note-blank::before { position: absolute; top: 6px; right: 0; content: ""; width: 7px; height: 7px; border-style: solid; border-width: 1px; border-color: #0156b6; }
+.f-note-blank::after { position: absolute; top: 10px; right: 3px; content: ""; width: 7px; height: 6px; border-style: solid; border-width: 0 0 1px 1px; border-color: #0156b6; }
+
+@media screen and (min-width: $breakpoint-hover) {
+	.f-note-blank { transition: all 0.2s ease; }
+	.f-note-blank::before { transition: all 0.2s ease; }
+	.f-note-blank::after { transition: all 0.2s ease; }
+	.f-note-blank:hover { color: #222222; border-bottom: 1px solid #222222; }
+	.f-note-blank:hover::before { border-color: #222222; }
+	.f-note-blank:hover::after { border-color: #222222; }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+	.f-note-area { margin-bottom: 30px; }
+
+	.f-note-list > li { padding-left: 18px; }
+	.f-note-list > li:not(:last-child) { margin-bottom: 8px; }
+	.f-note-list > li::before { top: 9px; left: 2px; width: 5px; height: 5px; }
+}
+
+
+
+/* フォーム
+========================================================= */
+
+/* レイアウト
+------------------------------------------ */
+
+.f-layout-field { display: flex; flex-wrap: wrap; border-top: 1px solid #bec8d6; width: 100%; }
+.f-layout-field > dt { border-bottom: 1px solid #bec8d6; padding: 34px 0 30px 15px; width: 320px; }
+.f-layout-field > dd { border-bottom: 1px solid #bec8d6; padding: 30px 15px 30px 0; width: calc(100% - 320px); }
+.f-layout-field > dd  > span { display: inline-block; padding-top: 4px; }
+
+.f-layout-name { display: flex; }
+.f-layout-name label { text-align: right; padding-right: 14px; padding-top: 4px; white-space: nowrap; }
+.f-layout-name label:nth-child(1) { width: 46px; }
+.f-layout-name label:nth-child(3) { width: 77px; }
+
+.f-layout-zip-wrap { margin-bottom: 20px; }
+
+.f-layout-zip { display: flex; }
+.f-layout-zip label { padding-top: 4px; }
+.f-layout-zip label:nth-child(1) { padding-right: 14px; }
+.f-layout-zip label:nth-child(3) { width: 43px; text-align: center; }
+.f-layout-zip div:nth-child(2) { width: 90px; }
+.f-layout-zip div:nth-child(4) { width: 100px; }
+
+.f-layout-address1 { margin-top: 14px; margin-bottom: 9px; }
+.f-layout-address2 { display: flex; }
+.f-layout-address2 div:nth-child(1) { width: 450px; }
+.f-layout-address2 label:nth-child(2) { padding-top: 4px; padding-left: 14px; }
+
+.f-layout-checkbox li:not(:last-child) { margin-bottom: 6px; }
+
+@media screen and (max-width: $breakpoint-laptop) {
+	.f-layout-address2 { flex-direction: column; }
+	.f-layout-address2 div:nth-child(1) { width: 100%; }
+	.f-layout-address2 label:nth-child(2) { padding-left: 0; }
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+	.f-layout-field > dt { width: 290px; }
+	.f-layout-field > dd { width: calc(100% - 290px); }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+	.f-layout-field { flex-direction: column; }
+	.f-layout-field > dt { width: 100%; border-bottom: none; padding: 14px 0 8px 0; }
+	.f-layout-field > dd { width: 100%; padding: 4px 0 21px 0; }
+	.f-layout-field > dd  > span { padding-top: 0; }
+
+	.f-layout-name { flex-direction: column; }
+	.f-layout-name label { text-align: left; padding-right: 0; padding-top: 0; margin-bottom: 7px; }
+	.f-layout-name label:nth-child(1) { width: 100%; }
+	.f-layout-name label:nth-child(3) { width: 100%; padding-top: 10px; }
+
+	.f-layout-checkbox li:not(:last-child) { margin-bottom: 4px; }
+}
+
+
+/* 入力
+------------------------------------------ */
+
+.f-label { font-size: 1.6rem; font-weight: 500; }
+.f-label--req { position: relative; display: inline-block; }
+.f-label--req::after { position: absolute; top: 3px; right: -46px; white-space: nowrap; color: #ffffff; font-size: 1.2rem; font-weight: 500; line-height: 1; content: "必須"; background-color: #ed3091; border-radius: 2px; padding: 4px 4px 5px 4px; display: inline-block; }
+
+.f-text input { width: 100%; height: 36px; background-color: #fafbfd; border: 1px solid #b4c0d6; border-radius: 2px; padding: 4px 12px 6px 12px; }
+.f-text--w90 { max-width: 90px; }
+.f-text--w100 { max-width: 100px; }
+.f-text--w140 { max-width: 140px; }
+.f-text--w450 { max-width: 450px; }
+
+.f-textarea textarea { width: 100%; height: 160px; min-height: 160px; background-color: #fafbfd; border: 1px solid #b4c0d6; border-radius: 2px; padding: 4px 12px 6px 12px; }
+
+.f-radio { overflow: hidden; padding-top: 4px; }
+.f-radio > li:not(:last-child) { margin-bottom: 6px; }
+.f-radio input { display: none; }
+.f-radio input[type="radio"]+label { position: relative; display: inline-block; cursor: pointer; padding: 0 0 2px 26px; }
+.f-radio input[type="radio"]+label::before { position: absolute; top: 6px; left: 0; z-index: 11; content: ""; width: 16px; height: 16px; background-color: #fafbfd; border: 1px solid #b4c0d6; border-radius: 50%; }
+.f-radio input[type="radio"]:checked+label::after { position: absolute; top: 10px; left: 4px; z-index: 12; content: ""; width: 8px; height: 8px; background-color: #0156b6; border-radius: 50%; }
+
+.f-checkbox input { display: none; }
+.f-checkbox input[type="checkbox"]+label { position: relative; display: inline-block; cursor: pointer; padding-left: 30px; }
+.f-checkbox input[type="checkbox"]+label::before { position: absolute; top: 6px; left: 0; z-index: 11; content: ""; width: 17px; height: 17px; background-color: #fafbfd; border: 1px solid #b4c0d6; border-radius: 2px; }
+.f-checkbox input[type="checkbox"]:checked+label::after,
+.f-checkbox--checked input[type="checkbox"]+label::after { position: absolute; top: 9px; left: 3px; content: ""; z-index: 12; width: 11px; height: 7px; border-bottom: 2px solid #0156b6; border-left: 2px solid #0156b6; transform: rotate(-45deg); }
+
+.f-select select { width: 100%; font-size: 1.6rem; background-color: #fafbfd; border: 1px solid #b4c0d6; border-radius: 2px; padding: 7px 0 9px 6px; -webkit-appearance: none; }
+.f-select select::-ms-expand { display: none; }
+.f-select--w70 { width: 70px; }
+.f-select--w90 { width: 90px; }
+.f-select--w180 { width: 180px; }
+.f-select--arr { position: relative; }
+.f-select--arr::after { position: absolute; top: 11px; right: 14px; content: ""; width: 9px; height: 9px; border-top: 2px solid #222222; border-right: 2px solid #222222; transform: rotate(135deg); pointer-events: none; }
+
+.f-layout-note { font-size: 1.4rem; }
+
+@media screen and (max-width: $breakpoint-mobile) {
+	.f-text--w90 { max-width: 100%; }
+	.f-text--w100 { max-width: 100%; }
+	.f-text--w140 { max-width: 100%; }
+	.f-text--w450 { max-width: 100%; }
+}
+
+/* フォーカス
+------------------------------------------ */
+
+::placeholder { color: #acb8c6; }
+input:focus,
+textarea:focus { background-color: #ffffff; border: 1px solid #0156b6; box-shadow: 1px 2px 2px rgba(1,86,182,0.1) inset; }
+
+
+/* エラー
+------------------------------------------ */
+
+.f-error-message { color: #ee0000; }
+
+.f-error-blank { color: #ee0000; font-size: 1.4rem; padding-top: 10px; }
+
+@media screen and (max-width: $breakpoint-mobile) {
+	.f-error-message { font-size: 1.5rem; line-height: 2.5rem; }
+}
+
+
+/* 同意
+------------------------------------------ */
+
+.f-layout-consent { border-bottom: 1px solid #bec8d6; text-align: center; padding-top: 26px; padding-bottom: 28px; margin-bottom: 70px; }
+
+.f-checkbox-consen { display: inline-block; font-size: 1.5rem; font-weight: 400; line-height: 2.4rem; padding-bottom: 3px; transform: translateX(-22px); }
+.f-checkbox-consen input { display: none; }
+.f-checkbox-consen input[type="checkbox"]+label { position: relative; display: inline-block; cursor: pointer; padding-left: 33px; }
+.f-checkbox-consen input[type="checkbox"]+label::before { position: absolute; top: 3px; left: 0; z-index: 11; content: ""; width: 21px; height: 21px; background-color: #fafbfd; border: 2px solid #b4c0d6; border-radius: 2px; }
+.f-checkbox-consen input[type="checkbox"]:checked+label::after,
+.f-checkbox-consen--checked input[type="checkbox"]+label::after { position: absolute; top: 8px; left: 5px; content: ""; z-index: 12; width: 11px; height: 8px; border-bottom: 2px solid #0156b6; border-left: 2px solid #0156b6; transform: rotate(-45deg); }
+
+.f-checkbox-consen__external { position: relative; color: #0e447c; padding-right: 26px; text-decoration: none; }
+.f-checkbox-consen__external::after { position: absolute; top: 0; bottom: 0; right: 6px; margin-top: auto; margin-bottom: auto; content: ""; width: 14px; height: 14px; background: url(../images/common/icon_external_link.png) no-repeat left top; background-size: 100%; }
+
+.f-checkbox-consen__br { display: none; }
+
+@media screen and (min-width: $breakpoint-hover) {
+	.f-checkbox-consen__external { transition: color 0.2s ease; }
+	.f-checkbox-consen__external:hover { color: #e62388; }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+	.f-layout-consent { margin-bottom: 35px; }
+
+	.f-checkbox-consen { font-size: 1.4rem; letter-spacing: 0; }
+
+	.f-checkbox-consen__br { display: inline-block; }
+}
+
+@media screen and (max-width: 359px) {
+	.f-checkbox-consen { font-size: 1.2rem; line-height: 2rem; }
+}
+
+
+/* ボタン
+------------------------------------------ */
+
+.f-layout-btn { display: flex; justify-content: space-between; max-width: 360px; margin-right: auto; margin-left: auto; }
+.f-layout-btn__box-l { width: calc(150 / 360 * 100%); }
+.f-layout-btn__box-r { width: calc(190 / 360 * 100%); }
+
+.f-btn { position: relative; width: 100%; }
+.f-btn input { display: block; cursor: pointer; width: 100%; color: #ffffff; font-size: 1.7rem; font-weight: 700; line-height: 2.4rem; letter-spacing: 0.1em; text-align: center; text-indent: 0.1em; border-radius: 4px; padding-top: 20px; padding-bottom: 21px; border: none; outline: none; -webkit-appearance: none; }
+.f-btn--bg1 input { background-color: #909090; padding-left: 15px; }
+.f-btn--bg2 input { background-color: #0e447c; padding-right: 15px; }
+
+.f-btn__arr { position: relative; display: block; text-decoration: none; }
+.f-btn__arr::after { position: absolute; top: 2px; bottom: 0; margin-top: auto; margin-bottom: auto; content: ""; width: 12px; height: 12px; border-top: 2px solid #ffffff; border-right: 2px solid #ffffff; pointer-events: none; }
+.f-btn__arr--l::after { left: 17px; transform: rotate(-135deg); }
+.f-btn__arr--r::after { right: 17px; transform: rotate(45deg); }
+
+@media screen and (min-width: $breakpoint-hover) {
+	.f-btn--bg1 .input { transition: all 0.2s ease; }
+	.f-btn--bg2 .input { transition: all 0.2s ease; }
+	.f-btn--bg1:hover .input { background-color: #606060; }
+	.f-btn--bg2:hover .input { background-color: #e62388; }
+
+	.f-btn--bg1 .f-btn__arr--l::after { transition: all 0.2s ease; }
+	.f-btn--bg2 .f-btn__arr--r::after { transition: all 0.2s ease; }
+	.f-btn--bg1:hover .f-btn__arr--l::after { left: 13px; }
+	.f-btn--bg2:hover .f-btn__arr--r::after { right: 13px; }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+	.f-btn { font-size: 1.6rem; padding-top: 13px; padding-bottom: 15px; }
+}

@@ -1,0 +1,310 @@
+@charset "UTF-8";
+/* =========================================================
+ *
+ *  サイト ： サクラテック株式会社
+ *  タイプ ： Contents Layer [ ユーティリティ ]
+ *
+========================================================= */
+/* Set Function Import
+========================================================= */
+/* =========================================================
+ *
+ *  サイト ： サクラテック株式会社
+ *  タイプ ： Foundation Layer
+ *
+========================================================= */
+/* Set Foundation
+========================================================= */
+/* =========================================================
+ *
+ *  サイト ： サクラテック株式会社
+ *  タイプ ： Foundation Layer
+ *
+========================================================= */
+/* 変数定義
+========================================================= */
+/* カラー
+------------------------------------------ */
+/* フォント
+------------------------------------------ */
+/* ブレイクポイント
+------------------------------------------ */
+/* =========================================================
+ *
+ *  サイト ： サクラテック株式会社
+ *  タイプ ： Foundation Layer
+ *
+========================================================= */
+/* Set Foundation
+========================================================= */
+/* =========================================================
+ *
+ *  サイト ： サクラテック株式会社
+ *  タイプ ： Foundation Layer
+ *
+========================================================= */
+/* Set Function Import
+========================================================= */
+/* 計算式のpxなどの単位を消す
+========================================================= */
+/* line-heightの上下の余白を消す
+========================================================= */
+/* justify-content: space-between;の最後の行が両端揃えにならないようにする
+========================================================= */
+/* 3列用 */
+/* サイトマップ
+========================================================= */
+.sitemap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.sitemap__box {
+  width: 48%;
+}
+.sitemap__link {
+  width: 100%;
+  margin-bottom: 40px;
+}
+.sitemap__link > a {
+  color: #333333;
+  text-decoration: none;
+  font-size: 1.25em;
+  font-weight: 700;
+}
+.sitemap__link > a p:after {
+  content: "\f105";
+  font-family: "Font Awesome 5 Free";
+  font-size: 16px;
+  font-weight: 900;
+  color: #8d9baa;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  transition: right 0.2s ease-in-out 0s;
+}
+.sitemap__list ul li a {
+  text-decoration: none;
+  color: #333333;
+  display: block;
+  border-bottom: 1px solid #8d9baa;
+  font-weight: 500;
+  padding: 19px 40px 19px 16px;
+  position: relative;
+  transition: 0.26s ease;
+}
+.sitemap__list ul li a:after {
+  content: "\f105";
+  font-family: "Font Awesome 5 Free";
+  font-size: 16px;
+  font-weight: 900;
+  color: #8d9baa;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  transition: right 0.2s ease-in-out 0s;
+}
+.sitemap__list__inner li a {
+  font-weight: 300 !important;
+  font-size: 0.8em;
+  padding: 17px 40px 17px 16px !important;
+}
+.sitemap__list__inner li a:before {
+  content: "―";
+  padding-right: 5px;
+}
+.sitemap__title {
+  background-color: #f3f5f8;
+  padding: 12px 0;
+  position: relative;
+  transition: all 0.26s ease;
+}
+.sitemap__title > .__text {
+  position: relative;
+  display: block;
+  padding: 7px 0 7px 18px;
+  letter-spacing: 0.72px;
+}
+.sitemap__title > .__text:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background-color: #8d9baa;
+}
+.sitemap__title > .__text:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 12;
+  content: "";
+  width: 4px;
+  height: 10px;
+  background-color: #ff0a88;
+}
+
+@media screen and (min-width: 769px) {
+  .sitemap__link a p:hover {
+    background-color: #c3d5e4;
+  }
+  .sitemap__link a p:hover:after {
+    right: 10px;
+  }
+  .sitemap__list ul li a:hover {
+    color: #e62388;
+  }
+  .sitemap__list ul li a:hover:after {
+    right: 10px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .sitemap {
+    flex-direction: column;
+  }
+  .sitemap__box {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .sitemap__link {
+    margin-bottom: 24px;
+  }
+}
+/* プライバシーポリシー
+========================================================= */
+.c-orderlist1,
+.c-orderlist2 {
+  counter-reset: number 0;
+}
+
+.c-orderlist2 {
+  margin-top: 16px;
+}
+
+.c-orderlist1 > li, .c-orderlist2 > li {
+  position: relative;
+  padding-left: 1.8em;
+}
+
+.c-orderlist1 > li:before {
+  content: counter(number) ".";
+  counter-increment: number;
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  font-size: 1em;
+}
+
+.c-orderlist2 > li::before {
+  content: "(" counter(number) ").";
+  counter-increment: number;
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  font-size: 1em;
+}
+
+/* 当サイトのご利用について
+========================================================= */
+.c-headline3 {
+  background-color: #f3f5f8;
+  font-size: 1.25em;
+  font-weight: 700;
+  padding: 12px 0;
+  position: relative;
+}
+.c-headline3 > .__text {
+  position: relative;
+  display: block;
+  padding: 7px 0px 7px 18px;
+  letter-spacing: 0.72px;
+}
+.c-headline3 > .__text:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background-color: #8d9baa;
+}
+.c-headline3 > .__text:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 12;
+  content: "";
+  width: 4px;
+  height: 10px;
+  background-color: #ff0a88;
+}
+
+.c-headline__medium {
+  font-weight: 700;
+  position: relative;
+  border-bottom: 1px solid #8D9BAA;
+  margin-bottom: 23px;
+  padding-bottom: 8px;
+}
+.c-headline__medium .cont {
+  position: relative;
+  padding: 3px 0 4px 16px;
+}
+.c-headline__medium .cont > ._ttl {
+  display: inline-block;
+  line-height: 1.55556;
+  margin: -5px 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+.c-headline__medium .cont > ._ttl:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 3px;
+  height: 100%;
+  background: #8D9BAA;
+}
+
+.c-siteuselist {
+  margin: 16px 0;
+}
+.c-siteuselist li {
+  position: relative;
+  margin: 0px 23px 10px;
+}
+.c-siteuselist li:before {
+  border-radius: 100%;
+  width: 8px;
+  height: 8px;
+  display: block;
+  position: absolute;
+  content: "";
+  background: #8d9baa;
+  left: -16px;
+  top: 11px;
+}
+
+.banner_plugin {
+  width: 240px;
+  height: 75px;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 769px) {
+  .banner_plugin a img {
+    transition: opacity 0.3s ease-in-out 0s;
+  }
+  .banner_plugin a img:hover {
+    opacity: 0.6;
+  }
+}

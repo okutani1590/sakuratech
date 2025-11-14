@@ -1,0 +1,245 @@
+@charset "utf-8";
+
+/* =========================================================
+ *
+ *  サイト ： サクラテック株式会社
+ *  タイプ ： Component Layer
+ *
+========================================================= */
+
+
+/* =========================================================
+
+   ■各スタイル一覧
+
+   1）見出し
+   2）リスト
+   3）改行
+   4）注釈
+   5）スワイプ
+   6）テーブル
+   7）アンカーリンク
+   8）リンク
+
+========================================================= */
+
+
+/* Set Function Import
+========================================================= */
+
+@use "../../foundation/functions" as *;
+
+
+
+/* 1）見出し
+========================================================= */
+
+.c-headline1 { position: relative; color: #0e447c; font-size: 2.4rem; font-weight: 700; line-height: 3.2rem; padding-bottom: 10px; }
+.c-headline1::before { position: absolute; bottom: 0; left: 0; z-index: 11; content: ""; width: 100%; height: 1px; background-color: #8d9baa; }
+.c-headline1::after { position: absolute; bottom: 0; left: 0; z-index: 12; content: ""; width: 50px; height: 1px; background-color: #ff0a88; }
+
+.c-headline2 { position: relative; font-size: 3.4rem; font-weight: 700; line-height: 4.4rem; padding-top: 7px; padding-bottom: 13px; padding-left: 28px; }
+.c-headline2::before { position: absolute; top: 0; left: 0; z-index: 11; content: ""; width: 6px; height: 100%; background-color: #8d9baa; }
+.c-headline2::after { position: absolute; top: 0; left: 0; z-index: 12; content: ""; width: 6px; height: 10px; background-color: $color-main; }
+
+.c-headline3 { font-size: 1.7rem; font-weight: 500; line-height: 2.8rem; }
+
+@media screen and (max-width: $breakpoint-tablet) {
+	.c-headline2 { font-size: 2.8rem; line-height: 3.8rem; padding-top: 5px; padding-bottom: 11px; padding-left: 22px; }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+	.c-headline1 { font-size: 2rem; line-height: 2.8rem; padding-bottom: 9px; }
+	.c-headline1::after { width: 40px; }
+
+	.c-headline2 { font-size: 2.3rem; line-height: 3.3rem; padding-top: 2px; padding-bottom: 8px; padding-left: 18px; }
+	.c-headline2::before { width: 5px; }
+	.c-headline2::after { width: 5px; height: 7px; }
+
+	.c-headline3 { font-size: 1.6rem; line-height: 2.6rem; }
+}
+
+
+
+/* 2）リスト
+========================================================= */
+
+.c-list-pdf { width: 100%; display: flex; flex-wrap: wrap; }
+.c-list-pdf li { width: calc(300 / 1000 * 100%); }
+.c-list-pdf li:not(:nth-child(3n+3)) { margin-right: calc(50 / 1000 * 100%); }
+.c-list-pdf li:nth-child(n+4) { margin-top: 30px; }
+
+@media screen and (max-width: $breakpoint-tablet) {
+	.c-list-pdf li { width: 48.5%; }
+	.c-list-pdf li:not(:nth-child(3n+3)) { margin-right: auto; }
+	.c-list-pdf li:not(:nth-child(2n+2)) { margin-right: 3%; }
+	.c-list-pdf li:nth-child(n+4) { margin-top: auto; }
+	.c-list-pdf li:nth-child(n+3) { margin-top: 25px; }
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+	.c-list-pdf { flex-direction: column; }
+	.c-list-pdf li { width: 100%; }
+	.c-list-pdf li:not(:nth-child(2n+2)) { margin-right: 0; }
+	.c-list-pdf li:nth-child(n+3) { margin-top: auto; }
+	.c-list-pdf li:not(:first-child) { margin-top: 20px; }
+}
+
+
+
+/* 3）改行
+========================================================= */
+
+.c-br-on-off { display: block; }
+.c-br-off-on { display: none; }
+
+@media screen and (max-width: $breakpoint-mobile) {
+	.c-br-on-off { display: none; }
+	.c-br-off-on { display: block; }
+}
+
+
+
+/* 4）注釈
+========================================================= */
+
+.c-notes1 { padding-left: 1em; text-indent: -1em; }
+
+.c-notes2 { position: relative; padding-left: 35px; }
+.c-notes2::before { position: absolute; top: 0; left: 0; content: "（注）"; }
+
+.c-notes--fs13 { font-size: 1.3rem; line-height: 1.8rem; }
+.c-notes--fs14 { font-size: 1.4rem; line-height: 2rem; }
+.c-notes--fs15 { font-size: 1.5rem; line-height: 2.2rem; }
+
+
+
+/* 5）スワイプ
+========================================================= */
+
+@media screen and (max-width: $breakpoint-mobile) {
+	.c-swipe-set { position: relative; padding-top: 20px; white-space: nowrap; }
+	.c-swipe-set::before { position: absolute; top: 1px; left: 0; content: ""; width: 30px; height: 9px; background: url(../images/common/icon_swipe.svg) no-repeat left top; }
+	.c-swipe-set::after { position: absolute; top: 0; left: 38px; content: "横スクロール出来ます"; color: #888888; font-size: 1.2rem; line-height: 1rem; padding-bottom: 2px; }
+	.c-swipe-set__overflow { overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch; margin-right: -20px; margin-left: -20px; }
+	.c-swipe-set__both-ends { display: inline-block; min-width: 100%; padding-right: 20px; padding-left: 20px; }
+	.c-swipe-set__img { width: calc(767px + 40px); }
+	.c-swipe-set__table { width: calc(767px + 40px); }
+}
+
+
+
+/* 6）テーブル
+========================================================= */
+
+/* 表組・基本 */
+.c-table-basic { width: 100%; font-size: 1.5rem; line-height: 2.2rem; border-top: 1px solid #bcbcbc; }
+.c-table-basic thead { background-color: #ebf0f4; }
+.c-table-basic tr th { padding: 3px 10px 4px 10px; vertical-align: middle; text-align: center; border-bottom: 1px solid #bcbcbc; }
+.c-table-basic tr td { padding: 3px 10px 4px 10px; vertical-align: middle; text-align: center; border-bottom: 1px solid #bcbcbc; border-left: 1px solid #bcbcbc; }
+
+/* テーブル２カラム */
+.c-table-layout-2rows { display: flex; justify-content: space-between; }
+.c-table-layout-2rows__box { width: calc(485 / 1000 * 100%); }
+
+
+
+/* 7）アンカーリンク
+========================================================= */
+
+.c-al-top { padding-top: 70px; margin-top: -70px; }
+
+.c-anker-nav1 { width: 100%; padding-bottom: 68px; }
+.c-anker-nav1__box { overflow: hidden; }
+.c-anker-nav1__btn { position: relative; display: block; width: 100%; font-size: 1.8rem; font-weight: 700; line-height: 2.7rem; text-align: center; text-decoration: none; border-radius: 4px; padding-top: 10px; padding-bottom: 23px; }
+.c-anker-nav1__btn::after { position: absolute; bottom: 11px; right: 0; left: 0; margin-right: auto; margin-left: auto; content: ""; width: 8px; height: 8px; transform: rotate(135deg); }
+.c-anker-nav1--color1 .c-anker-nav1__btn { color: #0e447c; background-color: #ebf0f4; }
+.c-anker-nav1--color1 .c-anker-nav1__btn::after { border-top: 1px solid #0e447c; border-right: 1px solid #0e447c; }
+.c-anker-nav1--color2 .c-anker-nav1__btn { color: #333333; background-color: #e8f5d6; }
+.c-anker-nav1--color2 .c-anker-nav1__btn::after { border-top: 1px solid #333333; border-right: 1px solid #333333; }
+.c-anker-nav1--2column li { float: left; width: calc(475 / 1000 * 100%); margin-right: calc(50 / 1000 * 100%); margin-bottom: 20px; }
+.c-anker-nav1--2column li:nth-of-type(2n) { margin-right: 0; }
+.c-anker-nav1--3column li { float: left; width: calc(300 / 1000 * 100%); margin-right: calc(50 / 1000 * 100%); margin-bottom: 20px; }
+.c-anker-nav1--3column li:nth-of-type(3n) { margin-right: 0; }
+
+@media screen and (min-width: $breakpoint-hover) {
+	.c-anker-nav1--color1 .c-anker-nav1__btn { transition: all 0.26s ease; }
+	.c-anker-nav1--color1 .c-anker-nav1__btn::after { transition: all 0.26s ease; }
+	.c-anker-nav1--color1 .c-anker-nav1__btn:hover { background-color: #c3d5e4; }
+	.c-anker-nav1--color1 .c-anker-nav1__btn:hover::after { bottom: 8px; }
+	.c-anker-nav1--color2 .c-anker-nav1__btn { transition: all 0.26s ease; }
+	.c-anker-nav1--color2 .c-anker-nav1__btn::after { transition: all 0.26s ease; }
+	.c-anker-nav1--color2 .c-anker-nav1__btn:hover { background-color: #c0e297; }
+	.c-anker-nav1--color2 .c-anker-nav1__btn:hover::after { bottom: 8px; }
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+	.c-al-top { padding-top: 60px; margin-top: -60px; }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+	.c-anker-nav1 { padding-bottom: 50px; }
+	.c-anker-nav1--2column li { float: none; width: 100%; margin-right: 0; margin-bottom: auto; }
+	.c-anker-nav1--2column li:not(:last-child) { margin-bottom: 16px; }
+	.c-anker-nav1--3column li { float: none; width: 100%; margin-right: 0; margin-bottom: auto; }
+	.c-anker-nav1--3column li:not(:last-child) { margin-bottom: 16px; }
+	.c-anker-nav1__btn { font-size: 1.6rem; line-height: 2.6rem; padding-top: 12px; padding-bottom: 12px; }
+	.c-anker-nav1__btn::after { display: none; }
+	.c-anker-nav1__sp-arr { position: relative; padding-right: 19px; }
+	.c-anker-nav1__sp-arr::after { position: absolute; top: 0; bottom: 0; right: 0; margin-top: auto; margin-bottom: auto; content: ""; width: 8px; height: 8px; border-top: 1px solid #0e447c; border-right: 1px solid #0e447c; transform: rotate(135deg); }
+}
+
+
+
+/* 8）リンク
+========================================================= */
+
+.c-link-tel a { text-decoration: none; color: inherit; }
+.c-link-tel-none a { text-decoration: none; color: inherit; }
+
+.c-link-pdf { position: relative; display: block; max-width: 300px; width: 100%; height: 58px; color: #333333; font-size: 1.5rem; line-height: 2rem; text-decoration: none; border: 1px solid #333333; border-radius: 4px; }
+.c-link-pdf--w100 { max-width: 100%; }
+.c-link-pdf::before { position: absolute; top: 0; right: 24px; z-index: 11; content: ""; width: 1px; height: 40px; background-color: #333333; }
+.c-link-pdf::after { position: absolute; top: 39px; right: 20px; z-index: 10; content: ""; width: 9px; height: 6px; background: url(../images/common/icon_arr_dl.svg) no-repeat left top; }
+.c-link-pdf > div { display: flex; align-items: center; height: 100%; }
+.c-link-pdf > div > span { display: block; width: 100%; text-align: center; }
+.c-link-pdf > div > span > i { position: relative; display: inline-block; font-style: normal; text-align: left; padding-left: 24px; padding-right: 16px; }
+.c-link-pdf > div > span > i::before { position: absolute; top: 0; bottom: 0; left: 0; margin-top: auto; margin-bottom: auto; content: ""; width: 15px; height: 18px; background: url(../images/common/icon_pdf_c2.png) no-repeat left top; background-size: 15px 18px; }
+
+.c-link-btn1 { position: relative; display: block; max-width: 250px; color: #333333; font-size: 1.5rem; font-weight: 500; line-height: 2.2rem; letter-spacing: 0.1em; text-align: center; text-decoration: none; text-indent: 0.1em; border: 1px solid #333333; border-radius: 4px; background-color: rgba(255,255,255,1); padding-top: 12px; padding-bottom: 14px; padding-left: 16px; }
+.c-link-btn1::before { position: absolute; top: 0; bottom: 0; left: 0; margin-top: auto; margin-bottom: auto; z-index: 12; content: ""; width: 21px; height: 1px; background-color: #333333; }
+.c-link-btn1::after { position: absolute; top: 0; bottom: 0; left: 20px; margin-top: auto; margin-bottom: auto; z-index: 11; content: ""; width: 6px; height: 9px; background: url(../images/common/icon_arr_right.svg) no-repeat left top; }
+
+.c-external-link1 { position: relative; display: inline-block; color: #333333; text-decoration: none; padding-right: 22px; }
+.c-external-link1::before { position: absolute; top: 7px; right: 0; content: ""; width: 10px; height: 9px; border-style: solid; border-width: 2px; border-color: #333333; }
+.c-external-link1::after { position: absolute; top: 12px; right: 5px; content: ""; width: 9px; height: 8px; border-style: solid; border-width: 0 0 2px 2px; border-color: #333333; }
+
+@media screen and (min-width: $breakpoint-hover) {
+	.c-link-pdf { transition: color 0.3s ease; }
+	.c-link-pdf::before { transition: height 0.3s ease; }
+	.c-link-pdf::after { transition: top 0.3s ease; }
+	.c-link-pdf:hover { color: #e60012; }
+	.c-link-pdf:hover::before { height: 45px; }
+	.c-link-pdf:hover::after { top: 44px; }
+
+	.c-link-btn1 { transition: all 0.26s ease; }
+	.c-link-btn1::before { transition: all 0.26s ease; }
+	.c-link-btn1::after { transition: all 0.26s ease;  }
+	.c-link-btn1:hover { background-color: rgba(255,255,255,0); }
+	.c-link-btn1:hover::before { width: 27px; }
+	.c-link-btn1:hover::after { left: 26px; }
+
+	.c-external-link1 { transition: all 0.2s ease; }
+	.c-external-link1::before { transition: all 0.2s ease; }
+	.c-external-link1::after { transition: all 0.2s ease; }
+	.c-external-link1:hover { color: #ff0a88; }
+	.c-external-link1:hover::before { border-color: #ff0a88; }
+	.c-external-link1:hover::after { border-color: #ff0a88; }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+	.c-link-pdf { font-size: 1.3rem; line-height: 2rem; background: url(../images/common/icon_pdf.png) no-repeat left 1px; background-size: 19px 24px; padding-left: 29px; }
+	.c-link-pdf span { padding-right: 8px; padding-bottom: 3px; }
+	.c-link-pdf::before { right: 14px; }
+	.c-link-pdf::after { right: 10px; }
+}

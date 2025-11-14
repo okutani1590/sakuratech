@@ -1,0 +1,316 @@
+@charset "utf-8";
+
+/* =========================================================
+ *
+ *  サイト ： サクラテック株式会社
+ *  タイプ ： Projec Layer
+ *
+========================================================= */
+
+
+/* Set Function Import
+========================================================= */
+
+@use "../../foundation/functions" as *;
+
+
+
+/* カテゴリー扉
+========================================================= */
+
+//c-index-link-menu
+
+.c-index-link-menu {
+	$this: #{&};
+	width: 100%;
+	
+	&__list {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		
+		li {
+			@include flex3($col: 3, $width: 32%, $mt: 20px);
+		}
+	}
+	
+	&__link {
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: relative;
+		background: #ecf0f3;
+		text-decoration: none;
+		
+		&::before {
+			content: '';
+			position: absolute;
+			bottom: 11px;
+			right: 11px;
+			width: 25px;
+			height: 1px;
+			background: $color-base;
+		}
+		
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 7px;
+			right: 11px;
+			width: 6px;
+			height: 9px;
+			background: url('../images/common/icon_arr_local_off.svg') no-repeat left top;
+			transition: 0.3s ease;
+		}
+	}
+	
+	&__figure {
+		width: 100%;
+		display: block;
+		
+		.photo {
+			width: 100%;
+			overflow: hidden;
+			
+			img {
+				transition: 0.4s ease;
+			}
+		}
+		
+		.cap {
+			width: 100%;
+			height: 77px;
+			display: flex;
+			align-items: center;
+			padding: 0 45px 0 20px;
+			
+			._text {
+				font-weight: 500;
+				transition: 0.3s ease;
+				color: $color-base;
+				
+				span {
+					display: inline-block;
+				}
+			}
+		}
+	}
+}
+
+//c-index-link-file
+
+.c-index-link-file {
+	$this: #{&};
+	width: 100%;
+	
+	&__list {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		
+		li {
+			@include flex3($col: 3, $width: 30%, $mt: 40px);
+		}
+	}
+	
+	&__link {
+		width: 100%;
+		display: block;
+		border: 1px solid $color-base;
+		border-radius: 4px;
+		position: relative;
+		padding: 20px 36px 22px 20px;
+		text-align: center;
+		transition: 0.3s ease;
+		text-decoration: none;
+		
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 24px;
+			width: 1px;
+			height: 40px;
+			background-color: #333;
+			transition: 0.3s ease;
+		}
+		
+		&::after {
+			content: '';
+			position: absolute;
+			top: 39px;
+			right: 20px;
+			z-index: 1;
+			width: 9px;
+			height: 6px;
+			background: url('../images/common/icon_arr_dl.svg') no-repeat left top;
+			transition: 0.3s ease;
+		}
+		
+		.text {
+			line-height: 1.5;
+			position: relative;
+			padding-left: 24px;
+			color: $color-base;
+			
+			&::before {
+				content: '';
+				position: absolute;
+				top: 4px;
+				left: 0;
+				display: inline-block;
+				width: 15px;
+				height: 18px;
+				background: url(../images/common/icon_pdf_c2.png) no-repeat left top;
+				background-size: auto;
+				background-size: 15px 18px;
+			}
+		}
+	}
+}
+
+
+
+@media screen and (min-width: $breakpoint-hover) {
+	
+	//c-index-link-menu
+	
+	.c-index-link-menu {
+		$this: #{&};
+		
+		&__link {
+			
+			&:hover {
+				
+				&::after {
+					right: 6px;
+				}
+			}
+		}
+
+		&__figure {
+
+			.photo {
+
+				img {
+
+					#{$this}__link:hover & {
+						transform: scale(1.06);
+					}
+				}
+			}
+			
+			.cap {
+				
+				#{$this}__link:hover & {
+					
+					._text {
+						color: #e62388;
+					}
+				}
+			}
+		}
+	}
+	
+	//c-index-link-file
+	
+	.c-index-link-file {
+		$this: #{&};
+		
+		&__link {
+			
+			&:hover {
+				background: #ecf0f3;
+				
+				&::before {
+					height: 46px;
+				}
+				
+				&::after {
+					top: 45px;
+				}
+			}
+		}
+	}
+	
+}
+
+@media screen and (max-width: $breakpoint-laptop) {
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+	
+	//c-index-link-menu
+
+	.c-index-link-menu {
+
+		&__list {
+
+			li {
+				@include flex3($col: 2, $width: 48.6%, $mt: 30px);
+			}
+		}
+	}
+	
+	//c-index-link-file
+
+	.c-index-link-file {
+
+		&__list {
+
+			li {
+				@include flex3($col: 2, $width: 48.6%, $mt: 30px);
+			}
+		}
+	}
+	
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+	
+	//c-index-link-menu
+
+	.c-index-link-menu {
+
+		&__list {
+
+			li {
+				@include flex3($col: 1, $width: 100%, $max: true, $max_width: 400px, $mt: 20px);
+			}
+		}
+		
+		&__figure {
+			
+			.cap {
+				height: 67px;
+				padding: 0 40px 0 15px;
+			}
+		}
+	}
+	
+	//c-index-link-file
+
+	.c-index-link-file {
+
+		&__list {
+
+			li {
+				@include flex3($col: 1, $width: 100%, $max: true, $max_width: 400px, $mt: 20px);
+			}
+		}
+		
+		&__link {
+			padding: 16px 32px 18px 15px;
+			
+			.text {
+				
+				&::before {
+					top: 2px;
+				}
+			}
+		}
+	}
+	
+}

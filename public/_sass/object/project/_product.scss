@@ -1,0 +1,270 @@
+@charset "utf-8";
+
+/* =========================================================
+ *
+ *  サイト ： サクラテック株式会社
+ *  タイプ ： Projec Layer
+ *
+========================================================= */
+
+
+/* Set Function Import
+========================================================= */
+
+@use "../../foundation/functions" as *;
+
+
+
+/* ローカルナビ
+========================================================= */
+
+/* 製品情報 */
+.p-lnav-product { width: 100%; background-color: #ecf0f3; padding-top: 45px; padding-bottom: 60px; padding-right: 40px; padding-left: 40px; margin-bottom: 100px; }
+.p-lnav-product__box { max-width: 1200px; margin-right: auto; margin-left: auto; }
+.p-lnav-product__titel { color: #1d4f84; font-size: 2.4rem; font-weight: 700; line-height: 3rem; text-align: center; margin-bottom: 40px; }
+.p-lnav-product__ul { display: flex; flex-wrap: wrap; }
+.p-lnav-product__ul-li { width: calc(270 / 1200 * 100%); margin-right: calc(39.99 / 1200 * 100%); }
+.p-lnav-product__ul-li:nth-child(4n) { margin-right: 0; }
+.p-lnav-product__ul-li:nth-last-child(n+3) { margin-bottom: 40px; }
+.p-lnav-product__link-btn { position: relative; display: table; width: 100%; height: 75px; color: #0e447c; font-feature-settings: "palt"; font-size: 1.5rem; font-weight: 500; line-height: 2.2rem; letter-spacing: 0; text-align: center; text-decoration: none; background-color: rgba(255,255,255,1); border: 1px solid #0e447c; border-radius: 4px; }
+.p-lnav-product__link-btn::before { position: absolute; top: 0; bottom: 0; left: 0; margin-top: auto; margin-bottom: auto; margin-right: auto; z-index: 11; content: ""; width: 21px; height: 1px; background-color: #0e447c; }
+.p-lnav-product__link-btn::after { position: absolute; top: 0; bottom: 0; left: 20px; margin-top: auto; margin-bottom: auto; z-index: 11; content: ""; width: 6px; height: 9px; background: url(../images/common/icon_arr_local_off.svg) no-repeat left top; }
+.p-lnav-product__link-cell { display: table-cell; vertical-align: middle; }
+.p-lnav-product__link-pdf { position: relative; display: inline-block; padding-left: 24px; }
+.p-lnav-product__link-pdf::before { position: absolute; top: 0; bottom: 0; left: 0; margin-top: auto; margin-bottom: auto; content: ""; width: 15px; height: 18px; background: url(../images/common/icon_pdf_c2.png) no-repeat left top; background-size: 15px 18px; }
+
+
+/* 製品情報 ローカルナビ・アクティブ */
+.product-galvanized-iron .p-lnav-product__ul-li:nth-child(1) .p-lnav-product__link-btn { color: #ffffff; background-color: #8d9baa; border: 1px solid #8d9baa; }
+.product-galvanized-iron .p-lnav-product__ul-li:nth-child(1) .p-lnav-product__link-btn::before { background-color: #ffffff; }
+.product-galvanized-iron .p-lnav-product__ul-li:nth-child(1) .p-lnav-product__link-btn::after { background: url(../images/common/icon_arr_local_on.svg) no-repeat left top; }
+
+.product-galvanized-steel .p-lnav-product__ul-li:nth-child(2) .p-lnav-product__link-btn { color: #ffffff; background-color: #8d9baa; border: 1px solid #8d9baa; }
+.product-galvanized-steel .p-lnav-product__ul-li:nth-child(2) .p-lnav-product__link-btn::before { background-color: #ffffff; }
+.product-galvanized-steel .p-lnav-product__ul-li:nth-child(2) .p-lnav-product__link-btn::after { background: url(../images/common/icon_arr_local_on.svg) no-repeat left top; }
+
+.product-gambalz .p-lnav-product__ul-li:nth-child(3) .p-lnav-product__link-btn { color: #ffffff; background-color: #8d9baa; border: 1px solid #8d9baa; }
+.product-gambalz .p-lnav-product__ul-li:nth-child(3) .p-lnav-product__link-btn::before { background-color: #ffffff; }
+.product-gambalz .p-lnav-product__ul-li:nth-child(3) .p-lnav-product__link-btn::after { background: url(../images/common/icon_arr_local_on.svg) no-repeat left top; }
+
+.product-aquaculture-plated .p-lnav-product__ul-li:nth-child(4) .p-lnav-product__link-btn { color: #ffffff; background-color: #8d9baa; border: 1px solid #8d9baa; }
+.product-aquaculture-plated .p-lnav-product__ul-li:nth-child(4) .p-lnav-product__link-btn::before { background-color: #ffffff; }
+.product-aquaculture-plated .p-lnav-product__ul-li:nth-child(4) .p-lnav-product__link-btn::after { background: url(../images/common/icon_arr_local_on.svg) no-repeat left top; }
+
+.product-barbed-wire .p-lnav-product__ul-li:nth-child(5) .p-lnav-product__link-btn { color: #ffffff; background-color: #8d9baa; border: 1px solid #8d9baa; }
+.product-barbed-wire .p-lnav-product__ul-li:nth-child(5) .p-lnav-product__link-btn::before { background-color: #ffffff; }
+.product-barbed-wire .p-lnav-product__ul-li:nth-child(5) .p-lnav-product__link-btn::after { background: url(../images/common/icon_arr_local_on.svg) no-repeat left top; }
+
+.product-orchard-wire .p-lnav-product__ul-li:nth-child(6) .p-lnav-product__link-btn { color: #ffffff; background-color: #8d9baa; border: 1px solid #8d9baa; }
+.product-orchard-wire .p-lnav-product__ul-li:nth-child(6) .p-lnav-product__link-btn::before { background-color: #ffffff; }
+.product-orchard-wire .p-lnav-product__ul-li:nth-child(6) .p-lnav-product__link-btn::after { background: url(../images/common/icon_arr_local_on.svg) no-repeat left top; }
+
+.product-custom-order .p-lnav-product__ul-li:nth-child(7) .p-lnav-product__link-btn { color: #ffffff; background-color: #8d9baa; border: 1px solid #8d9baa; }
+.product-custom-order .p-lnav-product__ul-li:nth-child(7) .p-lnav-product__link-btn::before { background-color: #ffffff; }
+.product-custom-order .p-lnav-product__ul-li:nth-child(7) .p-lnav-product__link-btn::after { background: url(../images/common/icon_arr_local_on.svg) no-repeat left top; }
+
+.product-what-is .p-lnav-product__ul-li:nth-child(8) .p-lnav-product__link-btn { color: #ffffff; background-color: #8d9baa; border: 1px solid #8d9baa; }
+.product-what-is .p-lnav-product__ul-li:nth-child(8) .p-lnav-product__link-btn::before { background-color: #ffffff; }
+.product-what-is .p-lnav-product__ul-li:nth-child(8) .p-lnav-product__link-btn::after { background: url(../images/common/icon_arr_local_on.svg) no-repeat left top; }
+
+
+/* 製品情報 ガンバルZ */
+.p-lnav-product-gambalz { width: 100%; background-color: #ecf0f3; padding-top: 45px; padding-bottom: 60px; padding-right: 40px; padding-left: 40px; margin-bottom: 100px; }
+.p-lnav-product-gambalz__titel1 { font-feature-settings: "palt"; font-size: 1.8rem; line-height: 2.8rem; text-align: center; margin-bottom: 7px; }
+.p-lnav-product-gambalz__titel2 { color: #1d4f84; font-size: 2.4rem; font-weight: 700; line-height: 3rem; text-align: center; margin-bottom: 40px; }
+.p-lnav-product-gambalz__titel2-txt { position: relative; }
+.p-lnav-product-gambalz__titel2-txt::after { position: absolute; bottom: -22px; right: 7px; content: "※当社比"; color: #333333; font-feature-settings: "palt"; font-size: 1.4rem; font-weight: 400; }
+.p-lnav-product-gambalz__box { max-width: 1200px; margin-right: auto; margin-left: auto; }
+.p-lnav-product-gambalz__ul { display: flex; flex-wrap: wrap; }
+.p-lnav-product-gambalz__ul-li { width: calc(270 / 1200 * 100%); }
+.p-lnav-product-gambalz__ul-li:not(:nth-child(4n+4)) { margin-right: calc(39.99 / 1200 * 100%); }
+.p-lnav-product-gambalz__ul-li:nth-child(n+5) { margin-top: 40px; }
+.p-lnav-product-gambalz__link-btn { position: relative; display: table; width: 100%; height: 100px; font-size: 1.5rem; line-height: 2.2rem; text-decoration: none; text-align: center; background-color: #ffffff; border: 1px solid #0e447c; border-radius: 4px; }
+.p-lnav-product-gambalz__link-btn::before { position: absolute; top: 0; bottom: 0; left: 0; margin-top: auto; margin-bottom: auto; margin-right: auto; z-index: 11; content: ""; width: 21px; height: 1px; background-color: #0e447c; }
+.p-lnav-product-gambalz__link-btn::after { position: absolute; top: 0; bottom: 0; left: 20px; margin-top: auto; margin-bottom: auto; z-index: 11; content: ""; width: 6px; height: 9px; background: url(../images/common/icon_arr_local_off.svg) no-repeat left top; }
+.p-lnav-product-gambalz__link-cell { display: table-cell; vertical-align: middle; }
+.p-lnav-product-gambalz__link-txt1 { display: block; color: #333333; padding-bottom: 5px; }
+.p-lnav-product-gambalz__link-txt2 { display: block; font-weight: 500; font-feature-settings: "palt"; color: #0e447c; }
+.p-lnav-product-gambalz__link-br { display: block; }
+
+/* 製品情報 ガンバルZ ローカルナビ・アクティブ */
+.product-gambalz-steel-wire .p-lnav-product-gambalz__ul-li:nth-child(1) .p-lnav-product-gambalz__link-btn { background-color: #8d9baa; border: 1px solid #8d9baa; }
+.product-gambalz-steel-wire .p-lnav-product-gambalz__ul-li:nth-child(1) .p-lnav-product-gambalz__link-btn::before { background-color: #ffffff; }
+.product-gambalz-steel-wire .p-lnav-product-gambalz__ul-li:nth-child(1) .p-lnav-product-gambalz__link-btn::after { background: url(../images/common/icon_arr_local_on.svg) no-repeat left top; }
+.product-gambalz-steel-wire .p-lnav-product-gambalz__ul-li:nth-child(1) .p-lnav-product-gambalz__link-txt1 { color: #ffffff; }
+.product-gambalz-steel-wire .p-lnav-product-gambalz__ul-li:nth-child(1) .p-lnav-product-gambalz__link-txt2 { color: #ffffff; }
+
+.product-gambalz-hard-plating .p-lnav-product-gambalz__ul-li:nth-child(2) .p-lnav-product-gambalz__link-btn { background-color: #8d9baa; border: 1px solid #8d9baa; }
+.product-gambalz-hard-plating .p-lnav-product-gambalz__ul-li:nth-child(2) .p-lnav-product-gambalz__link-btn::before { background-color: #ffffff; }
+.product-gambalz-hard-plating .p-lnav-product-gambalz__ul-li:nth-child(2) .p-lnav-product-gambalz__link-btn::after { background: url(../images/common/icon_arr_local_on.svg) no-repeat left top; }
+.product-gambalz-hard-plating .p-lnav-product-gambalz__ul-li:nth-child(2) .p-lnav-product-gambalz__link-txt1 { color: #ffffff; }
+.product-gambalz-hard-plating .p-lnav-product-gambalz__ul-li:nth-child(2) .p-lnav-product-gambalz__link-txt2 { color: #ffffff; }
+
+.product-gambalz-plated-iron .p-lnav-product-gambalz__ul-li:nth-child(3) .p-lnav-product-gambalz__link-btn { background-color: #8d9baa; border: 1px solid #8d9baa; }
+.product-gambalz-plated-iron .p-lnav-product-gambalz__ul-li:nth-child(3) .p-lnav-product-gambalz__link-btn::before { background-color: #ffffff; }
+.product-gambalz-plated-iron .p-lnav-product-gambalz__ul-li:nth-child(3) .p-lnav-product-gambalz__link-btn::after { background: url(../images/common/icon_arr_local_on.svg) no-repeat left top; }
+.product-gambalz-plated-iron .p-lnav-product-gambalz__ul-li:nth-child(3) .p-lnav-product-gambalz__link-txt1 { color: #ffffff; }
+.product-gambalz-plated-iron .p-lnav-product-gambalz__ul-li:nth-child(3) .p-lnav-product-gambalz__link-txt2 { color: #ffffff; }
+
+.product-gambalz-techno-surf .p-lnav-product-gambalz__ul-li:nth-child(4) .p-lnav-product-gambalz__link-btn { background-color: #8d9baa; border: 1px solid #8d9baa; }
+.product-gambalz-techno-surf .p-lnav-product-gambalz__ul-li:nth-child(4) .p-lnav-product-gambalz__link-btn::before { background-color: #ffffff; }
+.product-gambalz-techno-surf .p-lnav-product-gambalz__ul-li:nth-child(4) .p-lnav-product-gambalz__link-btn::after { background: url(../images/common/icon_arr_local_on.svg) no-repeat left top; }
+.product-gambalz-techno-surf .p-lnav-product-gambalz__ul-li:nth-child(4) .p-lnav-product-gambalz__link-txt1 { color: #ffffff; }
+.product-gambalz-techno-surf .p-lnav-product-gambalz__ul-li:nth-child(4) .p-lnav-product-gambalz__link-txt2 { color: #ffffff; }
+
+@media screen and (min-width: $breakpoint-hover) {
+	/* 製品情報 */
+	.p-lnav-product__link-btn { transition: all 0.3s ease; }
+	.p-lnav-product__link-btn::before { transition: all 0.3s ease; }
+	.p-lnav-product__link-btn::after { transition: all 0.3s ease; }
+	.p-lnav-product__link-btn:hover { background-color: rgba(255,255,255,0); }
+	.p-lnav-product__link-btn:hover::before { width: 30px; }
+	.p-lnav-product__link-btn:hover::after { left: 29px; }
+
+	/* 製品情報 ガンバルZ */
+	.p-lnav-product-gambalz__link-btn { transition: all 0.3s ease; }
+	.p-lnav-product-gambalz__link-btn::before { transition: all 0.3s ease; }
+	.p-lnav-product-gambalz__link-btn::after { transition: all 0.3s ease; }
+	.p-lnav-product-gambalz__link-btn:hover { background-color: rgba(255,255,255,0); }
+	.p-lnav-product-gambalz__link-btn:hover::before { width: 30px; }
+	.p-lnav-product-gambalz__link-btn:hover::after { left: 29px; }
+}
+
+@media screen and (max-width: $breakpoint-laptop) {
+	/* 製品情報 */
+	.p-lnav-product { padding-bottom: 48px; margin-bottom: 0; }
+	.p-lnav-product__titel { font-size: 2.2rem; line-height: 2.8rem; margin-bottom: 30px; }
+	.p-lnav-product__ul-li { width: 31.5%; margin-right: 2.75%; }
+	.p-lnav-product__ul-li:nth-child(4n) { margin-right: auto; }
+	.p-lnav-product__ul-li:nth-child(3n) { margin-right: 0; }
+	.p-lnav-product__ul-li:nth-last-child(n+3) { margin-bottom: auto; }
+	.p-lnav-product__ul-li:nth-last-child(n+1) { margin-bottom: 30px; }
+
+	/* 製品情報 ガンバルZ */
+	.p-lnav-product-gambalz { padding-bottom: 48px; margin-bottom: 0; }
+	.p-lnav-product-gambalz__ul-li { width: 48.5%; }
+	.p-lnav-product-gambalz__ul-li:not(:nth-child(4n+4)) { margin-right: auto; }
+	.p-lnav-product-gambalz__ul-li:not(:nth-child(2n+2)) { margin-right: 3%; }
+	.p-lnav-product-gambalz__ul-li:nth-child(n+5) { margin-top: auto; }
+	.p-lnav-product-gambalz__ul-li:nth-child(n+3) { margin-top: 30px; }
+	.p-lnav-product-gambalz__link-br { display: none; }
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+	/* 製品情報 */
+	.p-lnav-product { padding-right: 30px; padding-left: 30px; }
+	.p-lnav-product__titel { font-size: 2rem; line-height: 2.6rem; }
+
+	.p-lnav-product__ul-li { width: 48%; margin-right: auto; }
+	.p-lnav-product__ul-li:nth-child(4n) { margin-right: auto; }
+	.p-lnav-product__ul-li:nth-child(3n) { margin-right: auto; }
+	.p-lnav-product__ul-li:nth-child(odd) { margin-right: 4%; }
+	.p-lnav-product__ul-li:nth-last-child(n+1) { margin-bottom: auto; }
+	.p-lnav-product__ul-li:nth-last-child(n+2) { margin-bottom: 20px; }
+
+	/* 製品情報 ガンバルZ */
+	.p-lnav-product-gambalz { padding-right: 30px; padding-left: 30px; }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+	/* 製品情報 */
+	.p-lnav-product { padding-right: 20px; padding-left: 20px; }
+	.p-lnav-product__ul-li { width: 100%; }
+	.p-lnav-product__ul-li:nth-child(odd) { margin-right: 0; }
+	.p-lnav-product__link-btn { height: 60px; }
+	.p-lnav-product__link-br { display: none; }
+
+	/* 製品情報 ガンバルZ */
+	.p-lnav-product-gambalz { padding-right: 20px; padding-left: 20px; }
+	.p-lnav-product-gambalz__titel1 { font-size: 1.5rem; line-height: 2.5rem; margin-bottom: 5px; }
+	.p-lnav-product-gambalz__titel2 { font-size: 2rem; line-height: 3rem; margin-bottom: 15px; }
+	.p-lnav-product-gambalz__titel2-txt { display: block; padding-bottom: 25px; }
+	.p-lnav-product-gambalz__titel2-txt::after { bottom: 0; right: 0; left: 0; margin-right: auto; margin-left: auto; font-size: 1.2rem; }
+	.p-lnav-product-gambalz__ul { flex-direction: column; }
+	.p-lnav-product-gambalz__ul-li { width: 100%; }
+	.p-lnav-product-gambalz__ul-li:not(:nth-child(2n+2)) { margin-right: auto; }
+	.p-lnav-product-gambalz__ul-li:nth-child(n+3) { margin-top: auto; }
+	.p-lnav-product-gambalz__ul-li:not(:first-child) { margin-top: 20px; }
+	.p-lnav-product-gambalz__link-btn { height: auto; padding-top: 13px; padding-bottom: 16px; }
+}
+
+
+
+/* タイトル
+========================================================= */
+
+.p-product-titel { width: 100%; margin-bottom: 72px; color: #333333; }
+.p-product-titel__box { position: relative; text-align: center; padding-bottom: 28px; color: #333333; }
+.p-product-titel__box::after { position: absolute; bottom: 0; right: 0; left: 0; margin-right: auto; margin-left: auto; content: ""; width: 70px; height: 1px; background-color: #ff0a88; }
+.p-product-titel__series { display: inline-block; color: #ffffff; font-size: 1.6rem; font-weight: 700; line-height: 2.4rem; background-color: #8d9baa; padding-top: 1px; padding-bottom: 3px; padding-right: 9px; padding-left: 9px; margin-bottom: 19px; }
+.p-product-titel__name { font-size: 3.4rem; font-weight: 700; line-height: 4.4rem; margin-bottom: 4px; }
+.p-product-titel__model { font-size: 2.6rem; font-weight: 700; line-height: 3.6rem; }
+
+
+
+
+
+
+
+.p-product-titel__copy { color: #0e447c; font-feature-settings: "palt"; font-size: 1.6rem; font-weight: 700; line-height: 2.6rem; text-align: center; padding-top: 25px; }
+.p-product-titel__br-tablet { display: none; }
+.p-product-titel__br-mobile { display: none; }
+
+@media screen and (max-width: $breakpoint-tablet) {
+	.p-product-titel__box { padding-bottom: 22px; }
+	.p-product-titel__series { font-size: 1.5rem; line-height: 2.2rem; padding-top: 2px; padding-bottom: 3px; margin-bottom: 17px; }
+	.p-product-titel__name { font-size: 3rem; line-height: 4rem; }
+	.p-product-titel__model { font-size: 2.4rem; line-height: 3.4rem; }
+	.p-product-titel__copy { font-size: 1.5rem; line-height: 2.5rem; }
+	.p-product-titel__br-tablet { display: inline-block; }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+	.p-product-titel { margin-bottom: 35px; }
+	.p-product-titel__box { padding-bottom: 17px; }
+	.p-product-titel__series { font-size: 1.4rem; line-height: 2rem; padding-top: 3px; padding-bottom: 4px; }
+	.p-product-titel__name { font-size: 2.4rem; line-height: 3.4rem; }
+	.p-product-titel__model { font-size: 2rem; line-height: 3rem; }
+	.p-product-titel__copy { padding-top: 16px; }
+	.p-product-titel__br-mobile { display: inline-block; }
+}
+
+
+
+/* 用途背景
+========================================================= */
+
+.p-product-use { position: relative; width: 100%; padding-top: 45px; padding-bottom: 33px; }
+.p-product-use::after { position: absolute; top: 0; left: -100vw; z-index: 11; content: ""; width: calc(100vw + 100vw); height: 100%; background-color: #f0f7fc; }
+.p-product-use__inner{ position: relative; z-index: 12; }
+
+
+
+/* 用途ギャラリー
+========================================================= */
+
+.p-use-photo { width: 100%; display: flex; flex-wrap: wrap; }
+.p-use-photo__box { position: relative; width: calc(300 / 1000 * 100%); color: #333333; font-size: 1.5rem; line-height: 2.2rem; text-align: center; text-decoration: none; margin-right: calc(50 / 1000 * 100%); margin-bottom: 32px; }
+.p-use-photo__box::before { position: absolute; top: 0; right: 0; z-index: 11; content: ""; width: 18px; height: 18px; background-image: url(../images/common/icon_loupe_.png); background-color: #4b4b4b; background-repeat: no-repeat; background-size: 100%; }
+.p-use-photo__box:nth-of-type(3n) { margin-right: 0; }
+.p-use-photo__box figcaption { padding-top: 6px; }
+.p-use-photo__box div { overflow: hidden; }
+
+@media screen and (min-width: $breakpoint-hover) {
+	.p-use-photo__box img,
+	.p-use-photo__box,
+	.p-use-photo__box::before { transition: all 0.4s ease; }
+	.p-use-photo__box:hover img { transform: scale(1.06); }
+	.p-use-photo__box:hover { color: #e62388; }
+	.p-use-photo__box:hover::before { background-color: #e62388; }
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+	.p-use-photo__box { font-size: 1.4rem; line-height: 2rem; margin-bottom: 26px; }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+	.p-use-photo { justify-content: space-between; }
+	.p-use-photo__box { width: 47%; margin-right: 0; font-size: 1.3rem; line-height: 1.8rem; margin-bottom: 20px; }
+	.p-use-photo__box::before { width: 22px; height: 22px; }
+}

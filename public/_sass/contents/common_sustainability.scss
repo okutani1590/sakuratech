@@ -1,0 +1,162 @@
+@charset "utf-8";
+
+/* =========================================================
+ *
+ *  サイト ： サクラテック株式会社
+ *  タイプ ： Contents Layer [ サステナビリティ ]
+ *
+========================================================= */
+
+
+/* Set Function Import
+========================================================= */
+
+@use "../foundation/functions" as *;
+
+
+
+/* 見出し
+========================================================= */
+
+.sustainability-headline { position: relative; font-size: 2.8rem; font-weight: 700; line-height: 3.8rem; text-align: center; padding-bottom: 20px; margin-bottom: 36px; }
+.sustainability-headline::after { position: absolute; bottom: 0; right: 0; left: 0; margin-right: auto; margin-left: auto; content: ""; width: 50px; height: 1px; background-color: #333333; }
+
+@media screen and (max-width: $breakpoint-mobile) {
+	.sustainability-headline { font-size: 2.2rem; line-height: 3.2rem; padding-bottom: 15px; margin-bottom: 22px; }
+	.sustainability-headline::after { width: 40px; }
+}
+
+
+
+/* 変わり続ける。暮らしの安全を守り続けるために。
+========================================================= */
+
+.sustainability-message {
+	margin-bottom: 84px; 
+	&__sdgs_illust1 { max-width: 340px; margin-right: auto; margin-left: auto; margin-bottom: 60px; }
+	&__h2 { font-size: 3.4rem; font-weight: 700; line-height: 4.6rem; text-align: center; margin-bottom: 26px; }
+	&__read { font-size: 1.6rem; font-weight: 500; line-height: 3.7rem; text-align: center; letter-spacing: 0.1em; text-indent: 0.1em; margin-bottom: 50px; }
+	&__sdgs_illust2 { max-width: 700px; margin-right: auto; margin-left: auto; margin-bottom: 44px; }
+	&__link { text-align: center; }
+	&__link-a { position: relative; display: inline-block; color: #0599d9; text-decoration: none; padding-left: 24px; }
+	&__link-a::before { position: absolute; top: 8px; left: 4px; z-index: 12; content: ""; width: 12px; height: 10px; border-style: solid; border-width: 2px; border-color: #0599d9; }
+	&__link-a::after { position: absolute; top: 11px; left: 0; z-index: 11; content: ""; width: 13px; height: 11px; border-style: solid; border-width: 0 0 2px 2px; border-color: #0599d9; }
+	&__link-a span { position: relative; padding-bottom: 1px; }
+	&__link-a span::after { position: absolute; bottom: 0; left: 0; content: ""; width: 100%; height: 1px; background-color: #0599d9; }
+	&__br-tablet { display: none; }
+	&__br-mobile { display: none; }
+}
+
+@media screen and (min-width: $breakpoint-hover) {
+	.sustainability-message {
+		&__link-a,
+		&__link-a::before,
+		&__link-a::after,
+		&__link-a span::after { transition: all 0.2s ease; }
+		&__link-a:hover { color: $color-main; }
+		&__link-a:hover::before { border-color: $color-main; }
+		&__link-a:hover::after { border-color: $color-main; }
+		&__link-a:hover span::after { background-color: $color-main; }
+	}
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+	.sustainability-message {
+		margin-bottom: 74px; max-width: 560px; margin-right: auto; margin-left: auto;
+		&__sdgs_illust1 { max-width: 280px; margin-bottom: 50px; }
+		&__h2 { font-size: 3rem; line-height: 4.6rem; margin-bottom: 20px; }
+		&__read { line-height: 3.4rem; text-align: left; margin-bottom: 40px; }
+		&__read br { display: none; }
+		&__sdgs_illust2 { margin-bottom: 38px; }
+		&__br-tablet { display: block; }
+	}
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+	.sustainability-message {
+		margin-bottom: 64px; max-width: 560px; margin-right: auto; margin-left: auto;
+		&__sdgs_illust1 { max-width: 240px; margin-bottom: 30px; }
+		&__h2 { font-size: 2.3rem; line-height: 3.8rem; margin-bottom: 16px; }
+		&__read { line-height: 3rem; margin-bottom: 30px; }
+		&__sdgs_illust2 { margin-bottom: 30px; }
+		&__br-mobile { display: block; }
+	}
+}
+
+
+
+/* SDGsへの取組み
+========================================================= */
+
+.sustainability-efforts {
+	position: relative; width: 100%; padding-top: 60px; padding-bottom: 70px;
+	&::after { position: absolute; top: 0; left: -100vw; z-index: 11; content: ""; width: calc(100vw + 100vw); height: 100%; background-color: #f2f9e9; }
+	&__inner { position: relative; z-index: 12; }
+	&__box { width: 100%; box-shadow: 0px 5px 5px 0px rgba(170,183,189,0.2); background-color: #ffffff; padding-top: 50px; padding-bottom: 50px; padding-right: 60px; padding-left: 60px; }
+	&__box:not(:last-child) { margin-bottom: 40px; }
+	&__sdgs-icon { display: flex; flex-wrap: wrap; justify-content: center; margin-bottom: 20px; }
+	&__sdgs-icon li { width: 80px; }
+	&__sdgs-icon li:not(:last-child) { margin-right: 20px; }
+	&__details { border-top: 1px solid #c8c8c8; display: flex; flex-wrap: wrap; justify-content: space-between; padding-top: 20px; }
+	&__details-img { width: calc(280 / 880 * 100%); height: 100%; }
+	&__details-txt { width: calc(560 / 880 * 100%); transform: translateY(-5px); }
+	&__details-h3 { font-size: 2rem; font-weight: 700; line-height: 3rem; margin-bottom: 12px; }
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+	.sustainability-efforts {
+		padding-top: 50px; padding-bottom: 60px;
+		&__box { padding-top: 30px; padding-bottom: 30px; padding-right: 30px; padding-left: 30px; }
+		&__box:not(:last-child) { margin-bottom: 30px; }
+		&__sdgs-icon li { width: 60px; }
+		&__sdgs-icon li:not(:last-child) { margin-right: 15px; }
+	}
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+	.sustainability-efforts {
+		padding-top: 40px; padding-bottom: 50px; max-width: 600px; margin-right: auto; margin-left: auto;
+		&__box { padding-top: 20px; padding-bottom: 22px; padding-right: 20px; padding-left: 20px; }
+		&__box:not(:last-child) { margin-bottom: 20px; }
+		&__sdgs-icon { margin-bottom: 15px; }
+		&__sdgs-icon li { width: 56spx; }
+		&__sdgs-icon li:not(:last-child) { margin-right: 12px; }
+		&__details { flex-direction: column; }
+		&__details-img { width: 100%; margin-bottom: 12px; }
+		&__details-txt { width: 100%; transform: translateY(0); }
+		&__details-h3 { font-size: 1.6rem; line-height: 2.6rem; margin-bottom: 10px; }
+		&__details-h3 br { display: none; }
+	}
+}
+
+
+
+/* 品質管理
+========================================================= */
+
+.sustainability-quality {
+	width: 100%; padding-top: 50px;
+	&__read { text-align: center; margin-bottom: 60px; }
+	&__flex { display: flex; justify-content: space-between; }
+	&__box { width: calc(470 / 1000 * 100%); height: 100%; }
+	&__box-h3 { font-size: 1.8rem; font-weight: 700; line-height: 2.8rem; text-align: center; border-top: 1px solid #333333; border-bottom: 1px solid #333333; padding-top: 3px; padding-bottom: 5px; margin-bottom: 13px; }
+	&__box-p { margin-bottom: 30px; }
+	&__box-figure { display: flex; justify-content: space-between; }
+	&__box-figure figure { width: calc(220 / 470 * 100%); height: 100%; }
+	&__box-figure figcaption { text-align: center; padding-top: 5px; }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+	.sustainability-quality {
+		padding-top: 40px; max-width: 600px; margin-right: auto; margin-left: auto;
+		&__read { text-align: left; margin-bottom: 30px; }
+		&__flex { flex-direction: column; }
+		&__box { width: 100%; }
+		&__box:not(:last-child) { margin-bottom: 30px; }
+		&__box-h3 { font-size: 1.6rem; line-height: 2.6rem; }
+		&__box-p { margin-bottom: 16px; }
+		&__box-figure { flex-direction: column; max-width: 400px; margin-right: auto; margin-left: auto; }
+		&__box-figure figure { width: 100%; }
+		&__box-figure figure:not(:last-child) { margin-bottom: 16px; }
+	}
+}

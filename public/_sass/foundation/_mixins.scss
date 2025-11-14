@@ -1,0 +1,85 @@
+@charset "utf-8";
+
+/* =========================================================
+ *
+ *  サイト ： サクラテック株式会社
+ *  タイプ ： Foundation Layer
+ *
+========================================================= */
+
+
+/* Set Function Import
+========================================================= */
+
+@use "variables" as var;
+@use "sass:math";
+
+
+
+/* 計算式のpxなどの単位を消す
+========================================================= */
+
+@function strip-unit($number) {
+	@if type-of($number) == 'number' and not unitless($number) {
+		@return math.div($number, ($number * 0 + 1));
+	}
+	@return $number;
+}
+
+
+
+/* line-heightの上下の余白を消す
+========================================================= */
+
+@mixin lh_remove($fs:16px, $lh:24px, $mt:0, $mb:0) {
+	line-height: strip-unit( math.div($lh, $fs) );
+	$adj_margin: $fs * -0.5 * ( strip-unit( math.div($lh, $fs) ) - 1 );
+	margin-top: $adj_margin + $mt;
+	margin-bottom: $adj_margin + $mb;
+}
+
+
+
+/* justify-content: space-between;の最後の行が両端揃えにならないようにする
+========================================================= */
+
+/* 3列用 */
+@mixin flex3($col:3, $width:300px, $max:false, $max_width:100%, $mt:20px) {
+	width: $width;
+	@if $col == 3 {
+		&:nth-child(n+4) {
+			margin-top: $mt;
+		}
+		&:nth-child(3n+2):last-child {
+			margin-right: auto;
+			margin-left: calc(50% - #{$width} * 1.5);
+		}
+	}
+	@else if $col == 2 {
+		@if $max {
+			max-width: $max_width;
+			margin: 0 auto;
+		}
+		&:nth-child(n+3) {
+			margin-top: $mt;
+		}
+		&:nth-child(3n+2):last-child {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+	@else if $col == 1 {
+		@if $max {
+			max-width: $max_width;
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+		&:nth-child(3n+2):last-child {
+			margin-left: auto;
+			margin-right: auto;
+		}
+		&:not(:first-child) {
+			margin-top: $mt;
+		}
+	}
+}

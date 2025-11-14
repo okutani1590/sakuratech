@@ -1,0 +1,911 @@
+@charset "UTF-8";
+/* =========================================================
+ *
+ *  サイト ： サクラテック株式会社
+ *  タイプ ： Contents Layer [ 会社情報 ]
+ *
+========================================================= */
+/* Set Function Import
+========================================================= */
+/* =========================================================
+ *
+ *  サイト ： サクラテック株式会社
+ *  タイプ ： Foundation Layer
+ *
+========================================================= */
+/* Set Foundation
+========================================================= */
+/* =========================================================
+ *
+ *  サイト ： サクラテック株式会社
+ *  タイプ ： Foundation Layer
+ *
+========================================================= */
+/* 変数定義
+========================================================= */
+/* カラー
+------------------------------------------ */
+/* フォント
+------------------------------------------ */
+/* ブレイクポイント
+------------------------------------------ */
+/* =========================================================
+ *
+ *  サイト ： サクラテック株式会社
+ *  タイプ ： Foundation Layer
+ *
+========================================================= */
+/* Set Foundation
+========================================================= */
+/* =========================================================
+ *
+ *  サイト ： サクラテック株式会社
+ *  タイプ ： Foundation Layer
+ *
+========================================================= */
+/* Set Function Import
+========================================================= */
+/* 計算式のpxなどの単位を消す
+========================================================= */
+/* line-heightの上下の余白を消す
+========================================================= */
+/* justify-content: space-between;の最後の行が両端揃えにならないようにする
+========================================================= */
+/* 3列用 */
+/* トップメッセージ・経営の信条
+========================================================= */
+.company-message {
+  width: 100%;
+}
+.company-message__catch {
+  width: 100%;
+  margin-bottom: 42px;
+}
+.company-message__catch .text {
+  display: block;
+  font-size: 3rem;
+  font-weight: 500;
+  text-align: left;
+  line-height: 1.5;
+}
+.company-message__catch .text span {
+  display: inline-block;
+}
+.company-message__box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.company-message__photo {
+  width: 50%;
+  max-width: 485px;
+  position: relative;
+  order: 2;
+}
+.company-message__photo div {
+  position: relative;
+  z-index: 1;
+  padding: 0 0 27px 27px;
+  margin-bottom: 20px;
+}
+.company-message__photo div::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: calc(100% - 27px);
+  height: calc(100% - 27px);
+  background: rgba(113, 125, 143, 0.15);
+  z-index: -1;
+}
+.company-message__photo .name {
+  text-align: right;
+}
+.company-message__photo .name span {
+  font-size: 2.4rem;
+  padding-left: 12px;
+  line-height: 1;
+}
+.company-message__textbox {
+  width: 45%;
+  max-width: 465px;
+}
+.company-message__textbox .text {
+  line-height: 2;
+  margin-top: -8px;
+  margin-bottom: -8px;
+  text-align: justify;
+}
+
+.company-principles {
+  width: 100%;
+}
+.company-principles__item {
+  width: 100%;
+}
+.company-principles__item .ttl {
+  font-size: 1.8rem;
+  position: relative;
+}
+.company-principles__item .ttl::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 2.5em;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 1px;
+  background: #000000;
+}
+.company-principles__item .cont {
+  width: 100%;
+}
+.company-principles__item .cont strong {
+  display: block;
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-top: -7.5px;
+  margin-bottom: -7.5px;
+}
+.company-principles__item .cont strong span {
+  display: inline-block;
+}
+.company-principles__list {
+  width: 100%;
+  counter-reset: section;
+}
+.company-principles__list li {
+  position: relative;
+  padding-left: 1.2em;
+  font-size: 2.3rem;
+  font-weight: 500;
+  line-height: 1;
+}
+.company-principles__list li:not(:first-child) {
+  margin-top: 24px;
+}
+.company-principles__list li::before {
+  content: counter(section) ".";
+  counter-increment: section;
+  position: absolute;
+  left: 2px;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 1279px) {
+  .company-message__catch .text {
+    font-size: 2.8rem;
+    line-height: 1.5;
+    margin-top: -7px;
+    margin-bottom: -7px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .company-message__catch {
+    margin-bottom: 24px;
+  }
+  .company-message__box {
+    display: block;
+  }
+  .company-message__photo {
+    width: 100%;
+    margin: 0 auto 25px;
+  }
+  .company-message__textbox {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .company-message__catch {
+    margin-bottom: 20px;
+  }
+  .company-message__photo div {
+    margin-bottom: 15px;
+    padding: 0 0 20px 20px;
+  }
+  .company-message__photo div::before {
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+  }
+  .company-message__photo .name span {
+    font-size: 1.8rem;
+    padding-left: 10px;
+  }
+  .company-message__catch .text {
+    font-size: 2rem;
+    line-height: 1.5;
+    margin-top: -5px;
+    margin-bottom: -5px;
+  }
+  .company-message__textbox .text {
+    line-height: 2;
+    margin-top: -7.5px;
+    margin-bottom: -7.5px;
+  }
+  .company-principles__item .ttl {
+    font-size: 1.6rem;
+  }
+  .company-principles__item .cont strong {
+    font-size: 2rem;
+    line-height: 1.5;
+    margin-top: -5px;
+    margin-bottom: -5px;
+  }
+  .company-principles__list li {
+    font-size: 1.8rem;
+  }
+  .company-principles__list li:not(:first-child) {
+    margin-top: 16px;
+  }
+}
+/* 経営理念
+========================================================= */
+.company-philosophy__headline {
+  width: 100%;
+  text-align: center;
+}
+.company-philosophy__headline .cap {
+  display: block;
+  font-family: "Barlow", sans-serif;
+  font-feature-settings: "palt";
+  font-size: 2.4rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  margin-bottom: 21px;
+  color: #10134c;
+}
+.company-philosophy__headline .cap:first-letter {
+  color: #ff0a88;
+}
+.company-philosophy__headline .main {
+  display: block;
+  font-feature-settings: "palt";
+  font-size: 3.2rem;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  color: #10134c;
+  line-height: 1.625;
+  margin-top: -10px;
+  margin-bottom: -10px;
+}
+.company-philosophy__headline .main ._ib {
+  display: inline-block;
+}
+.company-philosophy__box {
+  width: 100%;
+}
+.company-philosophy__inner {
+  width: 100%;
+  position: relative;
+  padding: 88px 0 96px;
+}
+.company-philosophy__inner:last-child {
+  padding-bottom: 128px;
+}
+.company-philosophy__inner.bg-blue::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100vw;
+  width: 200vw;
+  height: 100%;
+  background-color: #f0f7fc;
+  z-index: -1;
+}
+.company-philosophy__inner::after {
+  content: "";
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 96px;
+  background: #8d9baa;
+}
+.company-philosophy__textarea {
+  width: 100%;
+}
+.company-philosophy__text {
+  width: 100%;
+  text-align: center;
+  color: #10134c;
+  letter-spacing: 0.04em;
+  padding-left: 0.04em;
+  font-weight: 500;
+  line-height: 1.75;
+  margin-top: -6px;
+  margin-bottom: -6px;
+}
+.company-philosophy__text:not(:last-child) {
+  line-height: 1.75;
+  margin-top: -6px;
+  margin-bottom: 34px;
+}
+.company-philosophy__annotation {
+  width: 100%;
+  text-align: center;
+  font-size: 1.4rem;
+  letter-spacing: 0.04em;
+  padding-left: 0.04em;
+  color: #6f6f6f;
+  line-height: 1.4285714286;
+  margin-top: -3px;
+  margin-bottom: -3px;
+}
+.company-philosophy__annotation::before {
+  content: "※";
+  display: inline-block;
+}
+.company-philosophy__list {
+  width: 100%;
+  max-width: 864px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.company-philosophy__list li {
+  width: 47.2223%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f0f7fc;
+}
+.company-philosophy__item {
+  display: block;
+  text-align: center;
+  padding: 32px 15px;
+}
+.company-philosophy__item .cap {
+  display: block;
+  line-height: 1;
+  margin-bottom: 20px;
+  color: #10134c;
+  letter-spacing: 0.04em;
+  padding-left: 0.04em;
+}
+.company-philosophy__item .main {
+  display: block;
+  font-size: 2rem;
+  line-height: 1.4;
+  margin-top: -4px;
+  margin-bottom: -4px;
+  color: #10134c;
+  letter-spacing: 0.04em;
+  padding-left: 0.04em;
+}
+.company-philosophy__item .main ._ib {
+  display: inline-block;
+}
+
+@media screen and (max-width: 1023px) {
+  .company-philosophy__item .main {
+    font-size: 1.8rem;
+    line-height: 1.4444444444;
+    margin-top: -4px;
+    margin-bottom: -4px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .company-philosophy__headline .cap {
+    font-size: 2rem;
+    letter-spacing: 0.04em;
+    margin-bottom: 16px;
+  }
+  .company-philosophy__headline .main {
+    font-size: 2.3rem;
+    line-height: 1.5652173913;
+    margin-top: -6.5px;
+    margin-bottom: -6.5px;
+    letter-spacing: 0;
+  }
+  .company-philosophy__inner {
+    padding: 72px 0 64px;
+  }
+  .company-philosophy__inner:last-child {
+    padding-bottom: 95px;
+  }
+  .company-philosophy__inner::after {
+    top: -16px;
+    height: 72px;
+  }
+  .company-philosophy__text {
+    text-align: left;
+    padding-left: 0;
+    line-height: 1.6;
+    margin-top: -4.5px;
+    margin-bottom: -4.5px;
+  }
+  .company-philosophy__text:not(:last-child) {
+    line-height: 1.6;
+    margin-top: -4.5px;
+    margin-bottom: 31.5px;
+  }
+  .company-philosophy__text .sp_none {
+    display: none;
+  }
+  .company-philosophy__annotation {
+    text-align: left;
+    letter-spacing: 0;
+    padding-left: 1em;
+    margin-top: -16px;
+    position: relative;
+  }
+  .company-philosophy__annotation::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .company-philosophy__list {
+    max-width: 400px;
+    display: block;
+    margin-top: 32px;
+  }
+  .company-philosophy__list li {
+    width: 100%;
+  }
+  .company-philosophy__list li:not(:last-child) {
+    margin-bottom: 24px;
+  }
+  .company-philosophy__item {
+    padding: 24px 15px;
+  }
+  .company-philosophy__item .cap {
+    margin-bottom: 12px;
+  }
+  .company-philosophy__item .main {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    margin-top: -4px;
+    margin-bottom: -4px;
+  }
+}
+/* 会社概要
+========================================================= */
+.company-outline {
+  width: 100%;
+}
+.company-outline__item {
+  width: 100%;
+}
+.company-outline__item > div {
+  width: 100%;
+  display: flex;
+  padding: 31px 0 32px;
+  border-bottom: 1px solid #bcbcbc;
+}
+.company-outline__item > div:first-child {
+  padding-top: 0;
+}
+.company-outline__item > div > .ttl {
+  width: 174px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #7a7a7a;
+  line-height: 1;
+}
+.company-outline__item > div > .cont {
+  width: calc(100% - 174px);
+}
+.company-outline__item > div > .cont > p {
+  font-size: 1.8rem;
+  line-height: 1.8333333333;
+  margin-top: -7.5px;
+  margin-bottom: -7.5px;
+}
+.company-outline__list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.company-outline__list li {
+  width: 31.5%;
+}
+.company-outline__list li:nth-child(n+4) {
+  margin-top: 20px;
+}
+.company-outline__list li:nth-child(3n+2):last-child {
+  margin-right: auto;
+  margin-left: calc(50% - 31.5% * 1.5);
+}
+.company-outline__photo {
+  width: 100%;
+  margin-bottom: 23px;
+}
+.company-outline__textarea {
+  width: 100%;
+}
+.company-outline__textarea .ttl {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1;
+}
+.company-outline__textarea .text {
+  line-height: 1.4444444444;
+  margin-top: -4px;
+  margin-bottom: 26px;
+}
+.company-outline__textarea .link {
+  display: block;
+  width: 100%;
+  max-width: 149px;
+  position: relative;
+  line-height: 36px;
+  padding-bottom: 2px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #0e447c;
+  border: 1px solid #0e447c;
+  border-radius: 4px;
+  transition: 0.3s ease;
+}
+.company-outline__textarea .link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: auto;
+  z-index: 11;
+  width: 21px;
+  height: 1px;
+  background-color: #0e447c;
+  transition: 0.3s ease;
+}
+.company-outline__textarea .link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
+  z-index: 11;
+  width: 6px;
+  height: 9px;
+  background: url("../images/common/icon_arr_local_off.svg") no-repeat left top;
+  transition: 0.3s ease;
+}
+.company-outline__emblem {
+  width: 100%;
+  border: 1px solid #8d9baa;
+  padding: 40px;
+}
+.company-outline__emblem .ttl {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1;
+  padding: 5px 0 7px 10px;
+  border-left: 3px solid #0e447c;
+}
+.company-outline__flex {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+.company-outline__flex .photo {
+  width: 58px;
+  margin-right: 25px;
+}
+.company-outline__flex .text {
+  width: calc(100% - 83px);
+  line-height: 1.625;
+  margin-top: -5px;
+  margin-bottom: -5px;
+}
+
+@media screen and (min-width: 769px) {
+  .company-outline__textarea .link {
+    text-decoration: none;
+  }
+  .company-outline__textarea .link:hover {
+    background: #ecf0f3;
+  }
+  .company-outline__textarea .link:hover::before {
+    width: 30px;
+  }
+  .company-outline__textarea .link:hover::after {
+    left: 29px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .company-outline__list {
+    display: block;
+  }
+  .company-outline__list li {
+    width: 100%;
+    display: flex;
+  }
+  .company-outline__list li:nth-child(3n+2):last-child {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .company-outline__list li:not(:first-child) {
+    margin-top: 30px;
+  }
+  .company-outline__photo {
+    width: 50%;
+    max-width: 260px;
+    margin: 0 15px 0 0;
+  }
+  .company-outline__textarea {
+    width: 47%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .company-outline__item > div {
+    display: block;
+    padding: 19px 0 20px;
+  }
+  .company-outline__item > div:first-child {
+    padding-top: 19px;
+    border-top: 1px solid #bcbcbc;
+  }
+  .company-outline__item > div > .ttl {
+    width: 100%;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+  }
+  .company-outline__item > div > .cont {
+    width: 100%;
+  }
+  .company-outline__item > div > .cont > p {
+    font-size: 1.5rem;
+    line-height: 1.7333333333;
+    margin-top: -5.5px;
+    margin-bottom: -5.5px;
+  }
+  .company-outline__list {
+    display: block;
+  }
+  .company-outline__list li {
+    width: 100%;
+    display: block;
+  }
+  .company-outline__list li:nth-child(3n+2):last-child {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .company-outline__list li:not(:first-child) {
+    margin-top: 24px;
+  }
+  .company-outline__photo {
+    width: 100%;
+    margin: 0 0 16px 0;
+  }
+  .company-outline__textarea {
+    width: 100%;
+  }
+  .company-outline__textarea .ttl {
+    font-size: 1.6rem;
+  }
+  .company-outline__textarea .text {
+    line-height: 1.7333333333;
+    margin-top: -5.5px;
+    margin-bottom: 10.5px;
+  }
+  .company-outline__emblem {
+    padding: 20px;
+  }
+  .company-outline__emblem .ttl {
+    font-size: 1.8rem;
+    padding: 3px 0 5px 10px;
+  }
+  .company-outline__flex {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+  }
+  .company-outline__flex .photo {
+    width: 50px;
+    margin-right: 12px;
+    float: left;
+  }
+  .company-outline__flex .text {
+    width: 100%;
+    line-height: 1.6;
+    margin-top: -4.5px;
+    margin-bottom: -4.5px;
+  }
+  .company-outline__flex .text br {
+    display: none;
+  }
+}
+/* 沿革
+========================================================= */
+.company-history {
+  width: 100%;
+}
+.company-history__table {
+  width: 100%;
+  position: relative;
+  padding: 52px 0 33px 32px;
+}
+.company-history__table::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 8px;
+  width: 1px;
+  height: 100%;
+  background: #bcbcbc;
+}
+.company-history__table::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 8px;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 11px 9px 0 9px;
+  border-color: #bcbcbc transparent transparent transparent;
+}
+.company-history__table > div {
+  width: 100%;
+}
+.company-history__table > div:not(:last-child) {
+  margin-bottom: 55px;
+}
+.company-history__table > div > .ttl {
+  width: 100%;
+  position: relative;
+  font-family: "Barlow", sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+  color: #0e447c;
+  margin-bottom: 20px;
+}
+.company-history__table > div > .ttl::before {
+  content: "";
+  position: absolute;
+  top: 52%;
+  left: -24px;
+  transform: translate(-50%, -50%);
+  width: 11px;
+  height: 11px;
+  background: #ff0a88;
+  border-radius: 50%;
+}
+.company-history__table > div > .cont {
+  width: 100%;
+}
+.company-history__text {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+.company-history__text:not(:first-child) {
+  margin-top: 15px;
+}
+.company-history__text .month {
+  display: block;
+  width: 35px;
+  line-height: 1;
+  font-weight: bold;
+  color: #7a7a7a;
+  text-align: right;
+  margin-right: 22px;
+}
+.company-history__text .ttl {
+  width: calc(100% - 57px);
+  max-width: 892px;
+  line-height: 1.625;
+  margin-top: -5px;
+  margin-bottom: -5px;
+}
+.company-history__text .ttl span {
+  display: inline-block;
+}
+.company-history__list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.company-history__list li {
+  width: 31.7%;
+}
+.company-history__list li:nth-child(n+4) {
+  margin-top: 20px;
+}
+.company-history__list li:nth-child(3n+2):last-child {
+  margin-right: auto;
+  margin-left: calc(50% - 31.7% * 1.5);
+}
+.company-history__list li.w100 {
+  width: 100%;
+  max-width: 758px;
+}
+.company-history__photo {
+  width: 100%;
+}
+.company-history__photo .img {
+  width: 100%;
+  margin-bottom: 12px;
+}
+.company-history__photo .cap {
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  line-height: 1.5714285714;
+  margin-top: -4px;
+  margin-bottom: -4px;
+}
+.company-history__photo .cap span {
+  font-size: 16px;
+  font-weight: 500;
+  padding-left: 14px;
+}
+
+@media screen and (max-width: 767px) {
+  .company-history__table {
+    padding: 32px 0 26px 22px;
+  }
+  .company-history__table::before {
+    left: 7px;
+  }
+  .company-history__table::after {
+    left: 7px;
+  }
+  .company-history__table > div:not(:last-child) {
+    margin-bottom: 40px;
+  }
+  .company-history__table > div > .ttl {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+  .company-history__table > div > .ttl::before {
+    left: -15px;
+    width: 9px;
+    height: 9px;
+  }
+  .company-history__text .month {
+    width: 33px;
+    margin-right: 12px;
+  }
+  .company-history__text .ttl {
+    width: calc(100% - 49px);
+    line-height: 1.6666666667;
+    margin-top: -5px;
+    margin-bottom: -5px;
+  }
+  .company-history__list {
+    display: block;
+    margin-top: 25px;
+  }
+  .company-history__list li {
+    width: 100%;
+    max-width: 306px;
+  }
+  .company-history__list li:nth-child(3n+2):last-child {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .company-history__list li:not(:first-child) {
+    margin-top: 20px;
+  }
+  .company-history__list li:nth-child(3n+2):last-child {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .company-history__photo .img {
+    margin-bottom: 10px;
+  }
+  .company-history__photo .cap span {
+    font-size: 15px;
+  }
+}

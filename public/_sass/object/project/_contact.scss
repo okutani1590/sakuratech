@@ -1,0 +1,105 @@
+@charset "utf-8";
+
+/* =========================================================
+ *
+ *  サイト ： サクラテック株式会社
+ *  タイプ ： Projec Layer
+ *
+========================================================= */
+
+
+/* Set Function Import
+========================================================= */
+
+@use "../../foundation/functions" as *;
+
+
+
+/* お問い合わせ
+========================================================= */
+
+.p-contact { position: relative; z-index: 300; width: 100%; padding-right: 40px; padding-left: 40px; }
+.p-contact--bg-basic { background: url(../images/common/contact_bg_basic.jpg) no-repeat center center; background-size: cover; padding-top: 52px; padding-bottom: 76px; }
+.p-contact--bg-home { background-color: #ffffff; padding-top: 72px; padding-bottom: 80px; }
+
+.p-contact__inner { max-width: 1040px; margin-right: auto; margin-left: auto; }
+
+.p-contact__title { font-family: 'Barlow', sans-serif; font-size: 2.4rem; font-weight: 500; line-height: 3.2rem; letter-spacing: 0.1em; text-align: center; text-indent: 0.1em; margin-bottom: 40px; }
+.p-contact__title-basic { color: #ffffff; }
+.p-contact__title-home { color: #000000; }
+.p-contact__title:first-letter { color: #ff0a88; }
+
+.p-contact__box-inq { width: 100%; display: flex; justify-content: space-between; }
+.p-contact__box-inq-l { width: calc(480 / 1040 * 100%); }
+.p-contact__box-inq-r { width: calc(480 / 1040 * 100%); }
+
+.p-contact__tel { width: 100%; display: flex; align-items: center; justify-content: center; padding-top: 26px; padding-bottom: 30px; }
+.p-contact__tel--color1 { color: #ffffff; border-top: 1px solid #ffffff; border-bottom: 1px solid #ffffff; }
+.p-contact__tel--color2 { color: #333333; border-top: 1px solid #333333; border-bottom: 1px solid #333333; }
+.p-contact__tel-window { font-size: 1.8rem; line-height: 2.6rem; padding-right: 22px; }
+.p-contact__tel-number { position: relative; font-family: 'Barlow', sans-serif; font-size: 3.4rem; line-height: 4.2rem; letter-spacing: 0.1em; padding-left: 42px; }
+.p-contact__tel-number::before { position: absolute; top: 8px; left: 0; content: ""; width: 30px; height: 30px; }
+.p-contact__tel-number--icon1::before { background: url(../images/common/contact_icon_tel1.png) no-repeat left top; background-size: 100%; }
+.p-contact__tel-number--icon2::before { background: url(../images/common/contact_icon_tel2.png) no-repeat left top; background-size: 100%; }
+
+.p-contact__btn-contact { position: relative; display: block; width: 100%; color: #ffffff; font-size: 1.8rem; line-height: 2.6rem; text-align: center; text-decoration: none; background-color: #0f437c; border-radius: 4px; padding-top: 36px; padding-bottom: 38px; }
+.p-contact__btn-contact::after { position: absolute; top: 0; bottom: 0; right: 22px; margin-top: auto; margin-bottom: auto; content: ""; width: 9px; height: 9px; border-top: 2px solid #ffffff; border-right: 2px solid #ffffff; transform: rotate(45deg); }
+.p-contact__btn-contact-icon { position: relative; padding-left: 42px; }
+.p-contact__btn-contact-icon::before { position: absolute; top: 0; left: 0; content: ""; width: 31px; height: 29px; background: url(../images/common/contact_icon_mail.png) no-repeat left top; background-size: 31px 29px; }
+
+.p-contact__box-pdf { max-width: 480px; margin-top: 40px; margin-right: auto; margin-left: auto; }
+
+.p-contact__btn-company { position: relative; display: block; max-width: 480px; color: #333333; font-size: 1.5rem; line-height: 2.2rem; letter-spacing: 0.1em; text-align: center; text-decoration: none; border: 1px solid #333333; border-radius: 4px; padding-top: 13px; padding-bottom: 13px; }
+.p-contact__btn-company::before { position: absolute; top: 0; right: 24px; z-index: 11; content: ""; width: 1px; height: 30px; background-color: #333333; }
+.p-contact__btn-company::after { position: absolute; top: 29px; right: 20px; z-index: 10; content: ""; width: 9px; height: 6px; background: url(../images/common/icon_arr_dl.svg) no-repeat left top; }
+.p-contact__btn-company-icon { position: relative; padding-left: 23px; }
+.p-contact__btn-company-icon::before { position: absolute; top: 0; bottom: 0; left: 0; margin-top: auto; margin-bottom: auto; content: ""; width: 15px; height: 18px; background: url(../images/common/icon_pdf_c1.png) no-repeat left top; background-size: 15px 18px; }
+
+@media screen and (min-width: $breakpoint-hover) {
+	.p-contact__btn-contact { transition: all 0.3s ease; }
+	.p-contact__btn-contact::after { transition: all 0.3s ease; }
+	.p-contact__btn-contact:hover { background-color: #ff0a88; }
+	.p-contact__btn-contact:hover::after { right: 16px; }
+
+	.p-contact__btn-company { transition: all 0.3s ease; }
+	.p-contact__btn-company::before { transition: all 0.3s ease; }
+	.p-contact__btn-company::after { transition: all 0.3s ease; }
+	.p-contact__btn-company:hover { color: #ff0a88; }
+	.p-contact__btn-company:hover::before { height: 36px; }
+	.p-contact__btn-company:hover::after { top: 35px; }
+}
+
+@media screen and (max-width: $breakpoint-laptop) {
+	.p-contact__box-l { width: calc(490 / 1040 * 100%); }
+	.p-contact__box-r { width: calc(490 / 1040 * 100%); }
+
+	.p-contact__tel-window { font-size: 1.6rem; }
+	.p-contact__tel-number { font-size: 3.1rem; }
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+	.p-contact__tel { flex-direction: column; padding-top: 17px; padding-bottom: 16px; }
+
+	.p-contact__tel-window { font-size: 1.5rem; line-height: 2.3rem; padding-right: 0; }
+	.p-contact__tel-number { font-size: 3rem; padding-left: 35px; }
+	.p-contact__tel-number::before { top: 11px; width: 24px; height: 24px; }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+	.p-contact { padding-right: 20px; padding-left: 20px; }
+	.p-contact--bg-basic { padding-top: 31px; padding-bottom: 45px; }
+	.p-contact--bg-home { padding-top: 41px; padding-bottom: 50px; }
+
+	.p-contact__title { font-size: 2.1rem; line-height: 3rem; margin-bottom: 24px; }
+
+	.p-contact__box-inq { flex-direction: column; max-width: 400px; margin-right: auto; margin-left: auto; }
+	.p-contact__box-inq-l { width: 100%; margin-bottom: 20px; }
+	.p-contact__box-inq-r { width: 100%; }
+
+	.p-contact__tel { padding-top: 12px; padding-bottom: 11px; }
+	.p-contact__tel-number { letter-spacing: 0.05em; }
+
+	.p-contact__btn-contact { padding-top: 27px; padding-bottom: 27px; }
+
+	.p-contact__box-pdf { max-width: 400px; margin-top: 20px; }
+}

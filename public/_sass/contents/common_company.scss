@@ -1,0 +1,1102 @@
+@charset "utf-8";
+
+/* =========================================================
+ *
+ *  サイト ： サクラテック株式会社
+ *  タイプ ： Contents Layer [ 会社情報 ]
+ *
+========================================================= */
+
+
+/* Set Function Import
+========================================================= */
+
+@use "../foundation/functions" as *;
+
+
+
+/* トップメッセージ・経営の信条
+========================================================= */
+
+//company-message
+
+.company-message {
+	width: 100%;
+	
+	&__catch {
+		width: 100%;
+		margin-bottom: 42px;
+		
+		.text {
+			display: block;
+			font-size: 3rem;
+			font-weight: 500;
+			text-align: left;
+			line-height: 1.5;
+			
+			span {
+				display: inline-block;
+			}
+		}
+	}
+	
+	&__box {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+	
+	&__photo {
+		width: 50%;
+		max-width: 485px;
+		position: relative;
+		order: 2;
+		
+		div {
+			position: relative;
+			z-index: 1;
+			padding: 0 0 27px 27px;
+			margin-bottom: 20px;
+			
+			&::before {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: calc(100% - 27px);
+				height: calc(100% - 27px);
+				background: rgba(#717d8f, 0.15);
+				z-index: -1;
+			}
+		}
+		
+		.name {
+			text-align: right;
+			
+			span {
+				font-size: 2.4rem;
+				padding-left: 12px;
+				line-height: 1;
+			}
+		}
+	}
+	
+	&__textbox {
+		width: 45%;
+		max-width: 465px;
+		
+		.text {
+			@include lh_remove($fs: 16px, $lh: 32px);
+			text-align: justify;
+		}
+	}
+}
+
+//company-principles
+
+.company-principles {
+	width: 100%;
+	
+	&__item {
+		width: 100%;
+		
+		.ttl {
+			font-size: 1.8rem;
+			position: relative;
+			
+			&::after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 2.5em;
+				transform: translateY(-50%);
+				width: 50px;
+				height: 1px;
+				background: #000000;
+			}
+		}
+		
+		.cont {
+			width: 100%;
+			
+			strong {
+				display: block;
+				font-size: 3rem;
+				font-weight: 500;
+				@include lh_remove($fs: 30px, $lh: 45px);
+				
+				span {
+					display: inline-block;
+				}
+			}
+		}
+	}
+	
+	&__list {
+		width: 100%;
+		counter-reset: section;
+		
+		li {
+			position: relative;
+			padding-left: 1.2em;
+			font-size: 2.3rem;
+			font-weight: 500;
+			line-height: 1;
+			
+			&:not(:first-child) {
+				margin-top: 24px;
+			}
+			
+			&::before {
+				content: counter(section) ".";
+				counter-increment: section;
+				position: absolute;
+				left: 2px;
+				display: inline-block;
+				font-size: 1em;
+				font-weight: 500;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: $breakpoint-hover) {
+}
+
+@media screen and (max-width: $breakpoint-laptop) {
+	
+	//company-message
+	
+	.company-message {
+		
+		&__catch {
+			
+			.text {
+				font-size: 2.8rem;
+				@include lh_remove($fs: 28px, $lh: 42px);
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+	
+	//company-message
+	
+	.company-message {
+		
+		&__catch {
+			margin-bottom: 24px;
+		}
+
+		&__box {
+			display: block;
+		}
+		
+		&__photo {
+			width: 100%;
+			margin: 0 auto 25px;
+		}
+		
+		&__textbox {
+			width: 100%;
+			max-width: 100%;
+		}
+	}
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+	
+	//company-message
+	
+	.company-message {
+		
+		&__catch {
+			margin-bottom: 20px;
+		}
+		
+		&__photo {
+			
+			div {
+				margin-bottom: 15px;
+				padding: 0 0 20px 20px;
+
+				&::before {
+					width: calc(100% - 20px);
+					height: calc(100% - 20px);
+				}
+			}
+
+			.name {
+
+				span {
+					font-size: 1.8rem;
+					padding-left: 10px;
+				}
+			}
+		}
+		
+		&__catch {
+			
+			.text {
+				font-size: 2rem;
+				@include lh_remove($fs: 20px, $lh: 30px);
+			}
+		}
+	
+		&__textbox {
+
+			.text {
+				@include lh_remove($fs: 15px, $lh: 30px);
+			}
+		}
+	}
+	
+	//company-principles
+
+	.company-principles {
+
+		&__item {
+
+			.ttl {
+				font-size: 1.6rem;
+			}
+
+			.cont {
+
+				strong {
+					font-size: 2rem;
+					@include lh_remove($fs: 20px, $lh: 30px);
+				}
+			}
+		}
+
+		&__list {
+
+			li {
+				font-size: 1.8rem;
+
+				&:not(:first-child) {
+					margin-top: 16px;
+				}
+			}
+		}
+	}
+	
+}
+
+
+
+
+/* 経営理念
+========================================================= */
+
+//company-philosophy
+
+.company-philosophy {
+	
+	&__headline {
+		width: 100%;
+		text-align: center;
+		
+		.cap {
+			display: block;
+			font-family: $font-en;
+			font-feature-settings: 'palt';
+			font-size: 2.4rem;
+			font-weight: 600;
+			letter-spacing: 0.04em;
+			line-height: 1;
+			margin-bottom: 21px;
+			color: #10134c;
+			
+			&:first-letter {
+				color: $color-main;
+			}
+		}
+		
+		.main {
+			display: block;
+			font-feature-settings: 'palt';
+			font-size: 3.2rem;
+			font-weight: bold;
+			letter-spacing: 0.04em;
+			color: #10134c;
+			@include lh_remove($fs: 32px, $lh: 52px);
+			
+			._ib {
+				display: inline-block;
+			}
+		}
+	}
+	
+	&__box {
+		width: 100%;
+	}
+	
+	&__inner {
+		width: 100%;
+		position: relative;
+		padding: 88px 0 96px;
+		
+		&:last-child {
+			padding-bottom: 128px;
+		}
+		
+		&.bg-blue {
+			
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: -100vw;
+				width: calc(100vw + 100vw);
+				height: 100%;
+				background-color: #f0f7fc;
+				z-index: -1;
+			}
+		}
+		
+		&::after {
+			content: '';
+			position: absolute;
+			top: -24px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 1px;
+			height: 96px;
+			background: #8d9baa;
+		}
+	}
+	
+	&__textarea {
+		width: 100%;
+	}
+	
+	&__text {
+		width: 100%;
+		text-align: center;
+		color: #10134c;
+		letter-spacing: 0.04em;
+		padding-left: 0.04em;
+		font-weight: 500;
+		@include lh_remove($fs: 16px, $lh: 28px);
+		
+		&:not(:last-child) {
+			@include lh_remove($fs: 16px, $lh: 28px, $mb: 40px);
+		}
+	}
+	
+	&__annotation {
+		width: 100%;
+		text-align: center;
+		font-size: 1.4rem;
+		letter-spacing: 0.04em;
+		padding-left: 0.04em;
+		color: #6f6f6f;
+		@include lh_remove($fs: 14px, $lh: 20px);
+		
+		&::before {
+			content: '※';
+			display: inline-block;
+		}
+	}
+	
+	&__list {
+		width: 100%;
+		max-width: 864px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		margin-top: 50px;
+		
+		li {
+			width: 47.2223%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: #f0f7fc;
+		}
+	}
+	
+	&__item {
+		display: block;
+		text-align: center;
+		padding: 32px 15px;
+		
+		.cap {
+			display: block;
+			line-height: 1;
+			margin-bottom: 20px;
+			color: #10134c;
+			letter-spacing: 0.04em;
+			padding-left: 0.04em;
+		}
+		
+		.main {
+			display: block;
+			font-size: 2rem;
+			@include lh_remove($fs: 20px, $lh: 28px);
+			color: #10134c;
+			letter-spacing: 0.04em;
+			padding-left: 0.04em;
+			
+			._ib {
+				display: inline-block;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: $breakpoint-hover) {
+}
+
+@media screen and (max-width: $breakpoint-laptop) {
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+	
+	//company-philosophy
+	
+	.company-philosophy {
+		
+		&__item {
+			
+			.main {
+				font-size: 1.8rem;
+				@include lh_remove($fs: 18px, $lh: 26px);
+			}
+		}
+	}
+	
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+	
+	//company-philosophy
+	
+	.company-philosophy {
+		
+		&__headline {
+
+			.cap {
+				font-size: 2rem;
+				letter-spacing: 0.04em;
+				margin-bottom: 16px;
+			}
+
+			.main {
+				font-size: 2.3rem;
+				@include lh_remove($fs: 23px, $lh: 36px);
+				letter-spacing: 0;
+			}
+		}
+
+		&__inner {
+			padding: 72px 0 64px;
+
+			&:last-child {
+				padding-bottom: 95px;
+			}
+
+			&::after {
+				top: -16px;
+				height: 72px;
+			}
+		}
+		
+		&__text {
+			text-align: left;
+			padding-left: 0;
+			@include lh_remove($fs: 15px, $lh: 24px);
+
+			&:not(:last-child) {
+				@include lh_remove($fs: 15px, $lh: 24px, $mb: 36px);
+			}
+			
+			.sp_none {
+				display: none;
+			}
+		}
+
+		&__annotation {
+			text-align: left;
+			letter-spacing: 0;
+			padding-left: 1em;
+			margin-top: -16px;
+			position: relative;
+
+			&::before {
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		}
+
+		&__list {
+			max-width: 400px;
+			display: block;
+			margin-top: 32px;
+
+			li {
+				width: 100%;
+				
+				&:not(:last-child) {
+					margin-bottom: 24px;
+				}
+			}
+		}
+
+		&__item {
+			padding: 24px 15px;
+
+			.cap {
+				margin-bottom: 12px;
+			}
+
+			.main {
+				font-size: 1.6rem;
+				@include lh_remove($fs: 16px, $lh: 24px);
+			}
+		}
+	}
+	
+}
+
+
+
+
+/* 会社概要
+========================================================= */
+
+//company-outline
+
+.company-outline {
+	width: 100%;
+	
+	&__item {
+		width: 100%;
+		
+		> div {
+			width: 100%;
+			display: flex;
+			padding: 31px 0 32px;
+			border-bottom: 1px solid #bcbcbc;
+			
+			&:first-child {
+				padding-top: 0;
+			}
+			
+			> .ttl {
+				width: 174px;
+				font-size: 1.8rem;
+				font-weight: 500;
+				color: #7a7a7a;
+				line-height: 1;
+			}
+			
+			> .cont {
+				width: calc(100% - 174px);
+				
+				> p {
+					font-size: 1.8rem;
+					@include lh_remove($fs: 18px, $lh: 33px);
+				}
+			}
+		}
+	}
+	
+	&__list {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		
+		li {
+			@include flex3($col: 3, $width: 31.5%);
+		}
+	}
+	
+	&__photo {
+		width: 100%;
+		margin-bottom: 23px;
+	}
+	
+	&__textarea {
+		width: 100%;
+		
+		.ttl {
+			display: block;
+			font-size: 1.8rem;
+			font-weight: 500;
+			line-height: 1;
+		}
+		
+		.text {
+			@include lh_remove($fs: 18px, $lh: 26px, $mb: 30px);
+		}
+		
+		.link {
+			display: block;
+			width: 100%;
+			max-width: 149px;
+			position: relative;
+			line-height: 36px;
+			padding-bottom: 2px;
+			text-align: center;
+			font-size: 1.5rem;
+			font-weight: 500;
+			text-decoration: none;
+			color: $color-sub;
+			border: 1px solid $color-sub;
+			border-radius: 4px;
+			transition: 0.3s ease;
+			
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				margin-top: auto;
+				margin-bottom: auto;
+				margin-right: auto;
+				z-index: 11;
+				width: 21px;
+				height: 1px;
+				background-color: $color-sub;
+				transition: 0.3s ease;
+			}
+			
+			&::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 20px;
+				margin-top: auto;
+				margin-bottom: auto;
+				z-index: 11;
+				width: 6px;
+				height: 9px;
+				background: url('../images/common/icon_arr_local_off.svg') no-repeat left top;
+				transition: 0.3s ease;
+			}
+		}
+	}
+	
+	&__emblem {
+		width: 100%;
+		border: 1px solid #8d9baa;
+		padding: 40px;
+		
+		.ttl {
+			font-size: 2rem;
+			font-weight: 500;
+			line-height: 1;
+			padding: 5px 0 7px 10px;
+			border-left: 3px solid $color-sub;
+		}
+	}
+	
+	&__flex {
+		width: 100%;
+		display: flex;
+		align-items: flex-start;
+		
+		.photo {
+			width: 58px;
+			margin-right: 25px;
+		}
+		
+		.text {
+			width: calc(100% - 83px);
+			@include lh_remove($fs: 16px, $lh: 26px);
+		}
+	}
+}
+
+@media screen and (min-width: $breakpoint-hover) {
+	
+	//company-outline
+	
+	.company-outline {
+		
+		&__textarea {
+			
+			.link {
+				text-decoration: none;
+				
+				&:hover {
+					background: #ecf0f3;
+					
+					&::before {
+						width: 30px;
+					}
+					
+					&::after {
+						left: 29px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $breakpoint-laptop) {
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+	
+	//company-outline
+	
+	.company-outline {
+		
+		&__list {
+			display: block;
+
+			li {
+				@include flex3($col: 1, $width: 100%, $mt: 30px);
+				display: flex;
+			}
+		}
+
+		&__photo {
+			width: 50%;
+			max-width: 260px;
+			margin: 0 15px 0 0;
+		}
+
+		&__textarea {
+			width: 47%;
+		}
+	}
+	
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+	
+	//company-outline
+	
+	.company-outline {
+		
+		&__item {
+
+			> div {
+				display: block;
+				padding: 19px 0 20px;
+
+				&:first-child {
+					padding-top: 19px;
+					border-top: 1px solid #bcbcbc;
+				}
+
+				> .ttl {
+					width: 100%;
+					font-size: 1.6rem;
+					margin-bottom: 15px;
+				}
+
+				> .cont {
+					width: 100%;
+
+					> p {
+						font-size: 1.5rem;
+						@include lh_remove($fs: 15px, $lh: 26px);
+					}
+				}
+			}
+		}
+		
+		&__list {
+			display: block;
+
+			li {
+				@include flex3($col: 1, $width: 100%, $mt: 24px);
+				display: block;
+			}
+		}
+
+		&__photo {
+			width: 100%;
+			margin: 0 0 16px 0;
+		}
+
+		&__textarea {
+			width: 100%;
+			
+			.ttl {
+				font-size: 1.6rem;
+			}
+			
+			.text {
+				@include lh_remove($fs: 15px, $lh: 26px, $mb: 16px);
+			}
+		}
+		
+		&__emblem {
+			padding: 20px;
+
+			.ttl {
+				font-size: 1.8rem;
+				padding: 3px 0 5px 10px;
+			}
+		}
+
+		&__flex {
+			width: 100%;
+			display: block;
+			overflow: hidden;
+
+			.photo {
+				width: 50px;
+				margin-right: 12px;
+				float: left;
+			}
+
+			.text {
+				width: 100%;
+				@include lh_remove($fs: 15px, $lh: 24px);
+				
+				br {
+					display: none;
+				}
+			}
+		}
+	}
+	
+}
+
+
+
+
+/* 沿革
+========================================================= */
+
+//company-history
+
+.company-history {
+	width: 100%;
+	
+	&__table {
+		width: 100%;
+		position: relative;
+		padding: 52px 0 33px 32px;
+		
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 8px;
+			width: 1px;
+			height: 100%;
+			background: #bcbcbc;
+		}
+		
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 8px;
+			transform: translateX(-50%);
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 11px 9px 0 9px;
+			border-color: #bcbcbc transparent transparent transparent;
+		}
+		
+		> div {
+			width: 100%;
+			
+			&:not(:last-child) {
+				margin-bottom: 55px;
+			}
+			
+			> .ttl {
+				width: 100%;
+				position: relative;
+				font-family: $font-en;
+				font-size: 36px;
+				font-weight: 500;
+				color: $color-sub;
+				margin-bottom: 20px;
+				
+				&::before {
+					content: '';
+					position: absolute;
+					top: 52%;
+					left: -24px;
+					transform: translate(-50%, -50%);
+					width: 11px;
+					height: 11px;
+					background: $color-main;
+					border-radius: 50%;
+				}
+			}
+			
+			> .cont {
+				width: 100%;
+			}
+		}
+	}
+	
+	&__text {
+		width: 100%;
+		display: flex;
+		align-items: flex-start;
+		
+		&:not(:first-child) {
+			margin-top: 15px;
+		}
+		
+		.month {
+			display: block;
+			width: 35px;
+			line-height: 1;
+			font-weight: bold;
+			color: #7a7a7a;
+			text-align: right;
+			margin-right: 22px;
+		}
+		
+		.ttl {
+			width: calc(100% - 57px);
+			max-width: 892px;
+			@include lh_remove($fs: 16px, $lh: 26px);
+			
+			span {
+				display: inline-block;
+			}
+		}
+	}
+	
+	&__list {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin-top: 30px;
+		
+		li {
+			@include flex3($col: 3, $width: 31.7%);
+			
+			&.w100 {
+				width: 100%;
+				max-width: 758px;
+			}
+		}
+	}
+	
+	&__photo {
+		width: 100%;
+		
+		.img {
+			width: 100%;
+			margin-bottom: 12px;
+		}
+		
+		.cap {
+			display: block;
+			width: 100%;
+			font-size: 14px;
+			@include lh_remove($fs: 14px, $lh: 22px);
+			
+			span {
+				font-size: 16px;
+				font-weight: 500;
+				padding-left: 14px;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: $breakpoint-hover) {
+}
+
+@media screen and (max-width: $breakpoint-laptop) {
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+	
+	//company-history
+	
+	.company-history {
+
+		&__table {
+			padding: 32px 0 26px 22px;
+
+			&::before {
+				left: 7px;
+			}
+
+			&::after {
+				left: 7px;
+			}
+
+			> div {
+
+				&:not(:last-child) {
+					margin-bottom: 40px;
+				}
+
+				> .ttl {
+					font-size: 30px;
+					margin-bottom: 15px;
+
+					&::before {
+						left: -15px;
+						width: 9px;
+						height: 9px;
+					}
+				}
+			}
+		}
+
+		&__text {
+
+			.month {
+				width: 33px;
+				margin-right: 12px;
+			}
+
+			.ttl {
+				width: calc(100% - 49px);
+				@include lh_remove($fs: 15px, $lh: 25px);
+			}
+		}
+
+		&__list {
+			display: block;
+			margin-top: 25px;
+
+			li {
+				@include flex3($col: 1, $width: 100%, $mt: 20px);
+				max-width: 306px;
+				
+				&:nth-child(3n+2):last-child {
+					margin-left: 0;
+					margin-right: 0;
+				}
+			}
+		}
+
+		&__photo {
+			
+			.img {
+				margin-bottom: 10px;
+			}
+
+			.cap {
+
+				span {
+					font-size: 15px;
+				}
+			}
+		}
+	}
+}
+

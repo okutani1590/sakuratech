@@ -1,0 +1,213 @@
+@charset "utf-8";
+
+/* =========================================================
+ *
+ *  サイト ： サクラテック株式会社
+ *  タイプ ： Utility Layer
+ *
+========================================================= */
+
+
+/* =========================================================
+
+   ■各スタイル一覧
+
+   1）テキスト
+   2）カラー
+   3）位置
+   4）レイアウト
+   5）上下の余白調整（padding）
+   6）下方向の間隔調整（margin）
+
+========================================================= */
+
+
+/* Set Function Import
+========================================================= */
+
+@use "../../foundation/functions" as *;
+
+
+
+/* 1）テキスト
+========================================================= */
+
+.u-fw-n { font-weight: normal; }
+.u-fw-b { font-weight: bold; }
+
+.u-fs12 { font-size: 1.2rem; }
+.u-fs13 { font-size: 1.3rem; }
+.u-fs14 { font-size: 1.4rem; }
+.u-fs15 { font-size: 1.5rem; }
+
+
+
+/* 2）カラー
+========================================================= */
+
+.u-color1 { color: #ee0000; }
+
+
+
+/* 3）位置
+========================================================= */
+
+.u-ta-l { text-align: left; }
+.u-ta-r { text-align: right; }
+.u-ta-c { text-align: center; }
+
+.u-va-t { vertical-align: top; }
+.u-va-m { vertical-align: middle; }
+.u-va-b { vertical-align: bottom; }
+
+
+
+/* 4）レイアウト
+========================================================= */
+
+.u-w100 { width: 100%; }
+
+
+
+/* 5）上下の余白調整（padding）
+========================================================= */
+
+.u-pt40 { padding-top: 40px; }
+.u-pt50 { padding-top: 50px; }
+.u-pt60 { padding-top: 60px; }
+.u-pt70 { padding-top: 70px; }
+.u-pt80 { padding-top: 80px; }
+.u-pt90 { padding-top: 90px; }
+.u-pt100 { padding-top: 100px; }
+.u-pt110 { padding-top: 110px; }
+.u-pt120 { padding-top: 120px; }
+
+.u-pb40 { padding-bottom: 40px; }
+.u-pb50 { padding-bottom: 50px; }
+.u-pb60 { padding-bottom: 60px; }
+.u-pb70 { padding-bottom: 70px; }
+.u-pb80 { padding-bottom: 80px; }
+.u-pb90 { padding-bottom: 90px; }
+.u-pb100 { padding-bottom: 100px; }
+.u-pb110 { padding-bottom: 110px; }
+.u-pb120 { padding-bottom: 120px; }
+
+@media screen and (max-width: $breakpoint-tablet) {
+	.u-pt40 { padding-top: calc(40px / 1.4); }
+	.u-pt50 { padding-top: calc(50px / 1.4); }
+	.u-pt60 { padding-top: calc(60px / 1.4); }
+	.u-pt70 { padding-top: calc(70px / 1.4); }
+	.u-pt80 { padding-top: calc(80px / 1.4); }
+	.u-pt90 { padding-top: calc(90px / 1.4); }
+	.u-pt100 { padding-top: calc(100px / 1.4); }
+	.u-pt110 { padding-top: calc(110px / 1.4); }
+	.u-pt120 { padding-top: calc(120px / 1.4); }
+
+	.u-pb40 { padding-bottom: calc(40px / 1.4); }
+	.u-pb50 { padding-bottom: calc(50px / 1.4); }
+	.u-pb60 { padding-bottom: calc(60px / 1.4); }
+	.u-pb70 { padding-bottom: calc(70px / 1.4); }
+	.u-pb80 { padding-bottom: calc(80px / 1.4); }
+	.u-pb90 { padding-bottom: calc(90px / 1.4); }
+	.u-pb100 { padding-bottom: calc(100px / 1.4); }
+	.u-pb110 { padding-bottom: calc(110px / 1.4); }
+	.u-pb120 { padding-bottom: calc(120px / 1.4); }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+	.u-pt40 { padding-top: calc(40px / 2); }
+	.u-pt50 { padding-top: calc(50px / 2); }
+	.u-pt60 { padding-top: calc(60px / 2); }
+	.u-pt70 { padding-top: calc(70px / 2); }
+	.u-pt80 { padding-top: calc(80px / 2); }
+	.u-pt90 { padding-top: calc(90px / 2); }
+	.u-pt100 { padding-top: calc(100px / 2); }
+	.u-pt110 { padding-top: calc(110px / 2); }
+	.u-pt120 { padding-top: calc(120px / 2); }
+
+	.u-pb40 { padding-bottom: calc(40px / 2); }
+	.u-pb50 { padding-bottom: calc(50px / 2); }
+	.u-pb60 { padding-bottom: calc(60px / 2); }
+	.u-pb70 { padding-bottom: calc(70px / 2); }
+	.u-pb80 { padding-bottom: calc(80px / 2); }
+	.u-pb90 { padding-bottom: calc(90px / 2); }
+	.u-pb100 { padding-bottom: calc(100px / 2); }
+	.u-pb110 { padding-bottom: calc(110px / 2); }
+	.u-pb120 { padding-bottom: calc(120px / 2); }
+}
+
+
+
+/* 6）下方向の間隔調整（margin）
+========================================================= */
+
+/* 調整幅 ： 0 ～ 160px（5px step） */
+
+.u-mb00 { margin-bottom: 0 !important; }
+.u-mb05 { margin-bottom: 5px !important; }
+.u-mb10 { margin-bottom: 10px !important; }
+.u-mb15 { margin-bottom: 15px !important; }
+.u-mb20 { margin-bottom: 20px !important; }
+.u-mb25 { margin-bottom: 25px !important; }
+.u-mb30 { margin-bottom: 30px !important; }
+.u-mb35 { margin-bottom: 35px !important; }
+.u-mb40 { margin-bottom: 40px !important; }
+.u-mb45 { margin-bottom: 45px !important; }
+.u-mb50 { margin-bottom: 50px !important; }
+.u-mb55 { margin-bottom: 55px !important; }
+.u-mb60 { margin-bottom: 60px !important; }
+.u-mb65 { margin-bottom: 65px !important; }
+.u-mb70 { margin-bottom: 70px !important; }
+.u-mb75 { margin-bottom: 75px !important; }
+.u-mb80 { margin-bottom: 80px !important; }
+.u-mb85 { margin-bottom: 85px !important; }
+.u-mb90 { margin-bottom: 90px !important; }
+.u-mb95 { margin-bottom: 95px !important; }
+.u-mb100 { margin-bottom: 100px !important; }
+.u-mb105 { margin-bottom: 105px !important; }
+.u-mb110 { margin-bottom: 110px !important; }
+.u-mb115 { margin-bottom: 115px !important; }
+.u-mb120 { margin-bottom: 120px !important; }
+.u-mb125 { margin-bottom: 125px !important; }
+.u-mb130 { margin-bottom: 130px !important; }
+.u-mb135 { margin-bottom: 135px !important; }
+.u-mb140 { margin-bottom: 140px !important; }
+.u-mb145 { margin-bottom: 145px !important; }
+.u-mb150 { margin-bottom: 150px !important; }
+.u-mb155 { margin-bottom: 155px !important; }
+.u-mb160 { margin-bottom: 160px !important; }
+
+@media screen and (max-width: $breakpoint-mobile) {
+	.u-mb05 { margin-bottom: 4px !important; }
+	.u-mb10 { margin-bottom: 7px !important; }
+	.u-mb15 { margin-bottom: 11px !important; }
+	.u-mb20 { margin-bottom: 13px !important; }
+	.u-mb25 { margin-bottom: 15px !important; }
+	.u-mb30 { margin-bottom: 17px !important; }
+	.u-mb35 { margin-bottom: 19px !important; }
+	.u-mb40 { margin-bottom: 21px !important; }
+	.u-mb45 { margin-bottom: 23px !important; }
+	.u-mb50 { margin-bottom: 25px !important; }
+	.u-mb55 { margin-bottom: 28px !important; }
+	.u-mb60 { margin-bottom: 30px !important; }
+	.u-mb65 { margin-bottom: 33px !important; }
+	.u-mb70 { margin-bottom: 35px !important; }
+	.u-mb75 { margin-bottom: 38px !important; }
+	.u-mb80 { margin-bottom: 40px !important; }
+	.u-mb85 { margin-bottom: 43px !important; }
+	.u-mb90 { margin-bottom: 45px !important; }
+	.u-mb95 { margin-bottom: 48px !important; }
+	.u-mb100 { margin-bottom: 50px !important; }
+	.u-mb105 { margin-bottom: 53px !important; }
+	.u-mb110 { margin-bottom: 55px !important; }
+	.u-mb115 { margin-bottom: 58px !important; }
+	.u-mb120 { margin-bottom: 60px !important; }
+	.u-mb125 { margin-bottom: 63px !important; }
+	.u-mb130 { margin-bottom: 65px !important; }
+	.u-mb135 { margin-bottom: 68px !important; }
+	.u-mb140 { margin-bottom: 70px !important; }
+	.u-mb145 { margin-bottom: 73px !important; }
+	.u-mb150 { margin-bottom: 75px !important; }
+	.u-mb155 { margin-bottom: 78px !important; }
+	.u-mb160 { margin-bottom: 80px !important; }
+}

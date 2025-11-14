@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+/* =========================================================
+ *
+ *  サイト ： サクラテック株式会社
+ *  タイプ ： Print Layer
+ *
+========================================================= */
+
+@media print {
+	.l-root-wrapper { width: 1200px; transform: scale(0.8); transform-origin: 0 0; }
+
+	.l-header__menu { display: none; }
+
+	.l-footer-area1 { display: none; }
+}

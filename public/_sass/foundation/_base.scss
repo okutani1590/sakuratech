@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+/* =========================================================
+ *
+ *  サイト ： サクラテック株式会社
+ *  タイプ ： Foundation Layer
+ *
+========================================================= */
+
+
+/* Set Function Import
+========================================================= */
+
+@use "../foundation/functions" as *;
+
+
+
+/* Foundation CSS
+========================================================= */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { width: 100%; height: 100%; overflow-y: scroll; }
+body { width: 100%; height: 100%; }
+
+p, pre { margin-top: 0; margin-bottom: 0; }
+blockquote { margin: 0; }
+ol, ul { list-style: none; margin-top: 0; margin-bottom: 0; padding-left: 0; }
+dl { margin-top: 0; margin-bottom: 0; }
+dd { margin-left: 0; }
+
+sup { top: -0.3em; padding-right: 0.2em; }
+sub { bottom: -0.1em; padding-right: 0.2em; }
+
+address { font-style: normal; }
+
+a { overflow: hidden; }
+a:link { outline-width: 0; }
+
+img { vertical-align: top; max-width: 100%; height: auto; }
+
+h1, h2, h3, h4, h5, h6 { font-weight: inherit; margin-top: 0; margin-bottom: 0; }
+
+table { border-collapse: collapse; }
+th, td { padding: 0; vertical-align: top; }
+th { font-weight: inherit; text-align: left; }
+
+small { font-size: 100%; }
+
+figure { margin: 0; }
+
+hr { display: block; border: none; margin-top: 0; margin-bottom: 0; }
+
+textarea { resize: vertical; }
+input[type="text"] { vertical-align: top; }
+input[type="radio"] { vertical-align: top; }
+input[type="checkbox"] { vertical-align: top; }
+label { display: inline-block; }
+optgroup { font-style: normal; }
+input[type="text"], input[type="password"], textarea, select { outline: none; }
+
+::-moz-placeholder { opacity: 1; }
+
+
+
+/* 基本設定
+========================================================= */
+
+html {
+	font-size: 62.5%; /* 10px */
+	line-height: 1;
+}
+
+body {
+	color: $color-base;
+	font-family: "YakuHanJP", "Noto Sans JP", "游ゴシック体", "Yu Gothic", "游ゴシック Medium", "Yu Gothic Medium", "メイリオ", "Meiryo", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "Arial", sans-serif;
+	font-size: 1.6rem;
+	font-weight: 400;
+	line-height: 2.6rem;
+}
+
+@media screen and (max-width: 767px) {
+	body {
+		font-size: 1.5rem;
+		line-height: 2.4rem;
+	}
+}

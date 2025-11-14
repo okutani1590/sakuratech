@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+/* =========================================================
+ *
+ *  サイト ： サクラテック株式会社
+ *  タイプ ： Foundation Layer
+ *
+========================================================= */
+
+
+/* 変数定義
+========================================================= */
+
+/* カラー
+------------------------------------------ */
+
+$color-base: #333333;
+$color-main: #ff0a88;
+$color-sub: #0e447c;
+
+
+/* フォント
+------------------------------------------ */
+
+$font-gothic: "YakuHanJP", "Noto Sans JP", "游ゴシック体", "Yu Gothic", "游ゴシック Medium", "Yu Gothic Medium", "メイリオ", "Meiryo", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "Arial", sans-serif;
+$font-en: "Barlow", sans-serif;
+
+
+/* ブレイクポイント
+------------------------------------------ */
+
+$breakpoint-laptop: 1279px;
+$breakpoint-tablet: 1023px;
+$breakpoint-mobile: 767px;
+$breakpoint-hover: 769px;

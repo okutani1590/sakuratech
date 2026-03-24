@@ -450,6 +450,9 @@ body {
   display: none !important;
 }
 
+.kv .sakura {
+  z-index: 99;
+}
 .kv_inner {
   position: relative;
   width: 100%;
@@ -470,18 +473,21 @@ body {
   max-width: 680px;
 }
 .kv .swiper-slide-5 .kv__txt {
-  top: 35%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 1000px;
 }
 .kv .swiper-slide-5 .kv__txt img {
-  width: 1100px;
+  width: 1200px;
 }
 .kv .swiper-slide-6 .kv__txt img {
   width: 48.3162518302vw;
 }
 .kv .swiper-pagination .swiper-pagination-bullet {
   background-color: #fff !important;
+  width: 10px;
+  height: 10px;
 }
 .kv__bg img {
   width: 100%;
@@ -668,7 +674,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 0;
+  z-index: -1;
 }
 
 .sakura li {
@@ -1069,6 +1075,9 @@ body {
   transition: all 0.3s ease;
 }
 
+.home .p-interview {
+  position: relative;
+}
 .home .p-interview__list-item {
   height: 300px !important;
 }
@@ -1083,6 +1092,7 @@ body {
 .home .p-interview__list-item a h3 {
   font-size: 34px;
   font-weight: 500;
+  text-shadow: 2px 3px 3px rgb(0, 0, 0);
 }
 @media screen and (max-width: 767px) {
   .home .p-interview__list-item a h3 {
@@ -1214,6 +1224,7 @@ body {
   display: inline-block;
   width: fit-content;
   margin-left: 30px;
+  text-shadow: 2px 3px 3px rgb(0, 0, 0);
 }
 @media screen and (max-width: 767px) {
   .p-interview__list-item a .name__person small {

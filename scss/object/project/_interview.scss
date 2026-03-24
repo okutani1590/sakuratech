@@ -5,6 +5,7 @@
 .home {
   .p-interview {
     position: relative;
+    overflow: hidden;
     &__list {
       &-item {
         height: 300px !important;

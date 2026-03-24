@@ -88,7 +88,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 0;
+  z-index: -1;
 }
 .sakura li {
   width: 60px;
@@ -96,6 +96,9 @@
   list-style: none;
   top: -50px;
   animation: fall 4s linear infinite, rotate1 2s ease-in-out infinite alternate;
+  @include for-device(tablet) {
+    width: 40px;
+  }
 }
 @keyframes fall {
   to {
@@ -122,11 +125,17 @@
   width: 80px;
   left: 0;
   animation: fall 10s linear infinite, rotate1 3s ease-in-out infinite alternate;
+  @include for-device(tablet) {
+    width: 60px;
+  }
 }
 .sakura li:nth-child(2) {
   width: 120px;
   left: 5vw;
   animation: fall 15s linear infinite, rotate1 2s ease-in-out infinite alternate;
+  @include for-device(tablet) {
+    width: 80px;
+  }
 }
 .sakura li:nth-child(3) {
   left: 15vw;
@@ -157,11 +166,17 @@
   width: 80px;
   right: 0;
   animation: fall 10s linear infinite, rotate1 3s ease-in-out infinite alternate;
+  @include for-device(tablet) {
+    width: 60px;
+  }
 }
 .sakura li:nth-child(10) {
   width: 120px;
   right: 5vw;
   animation: fall 15s linear infinite, rotate1 2s ease-in-out infinite alternate;
+  @include for-device(tablet) {
+    width: 80px;
+  }
 }
 .sakura li:nth-child(11) {
   right: 15vw;
